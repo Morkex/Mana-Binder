@@ -1,0 +1,40 @@
+# Dependencias y builds
+app/node_modules/
+app/dist/
+**/__pycache__/
+*.pyc
+.Python
+
+# Colección: imágenes locales (muy pesadas; se regeneran con enriquecer_coleccion.py)
+coleccion_organizada/imagenes/
+
+# Caché y CSV derivados (se regeneran con enriquecer_coleccion.py)
+coleccion_organizada/scryfall_cache.json
+coleccion_organizada/coleccion_completa.csv
+coleccion_organizada/por_color/
+coleccion_organizada/por_color_grupos/
+coleccion_organizada/normales.csv
+coleccion_organizada/foils.csv
+coleccion_organizada/por_set/
+
+# Entorno / secretos
+.env
+.env.*
+!.env.example
+
+# Sistema / editores
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.lnk
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs y temporales
+*.log
+npm-debug.log*
+.cache/
+tmp/
+temp/
