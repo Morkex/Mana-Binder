@@ -13,6 +13,15 @@ export function toMoxfieldList(commander: Card, deck: Card[]): string {
   return lines.join('\n')
 }
 
+/** Formato Archidekt / lista genérica 1x Name. */
+export function toArchidektList(commander: Card, deck: Card[]): string {
+  const lines = [
+    `1x ${commander.name} *CMDR*`,
+    ...countByName(deck).map(({ name, count }) => `${count}x ${name}`),
+  ]
+  return lines.join('\n')
+}
+
 /** Lista simple con cantidades agrupadas. */
 export function toSimpleList(commander: Card, deck: Card[]): string {
   const lines = [
@@ -20,6 +29,18 @@ export function toSimpleList(commander: Card, deck: Card[]): string {
     ...countByName(deck).map(({ name, count }) => `${count} ${name}`),
   ]
   return lines.join('\n')
+}
+
+export type ExportFormat = 'moxfield' | 'archidekt' | 'simple'
+
+export function formatDeckList(
+  commander: Card,
+  deck: Card[],
+  format: ExportFormat = 'moxfield',
+): string {
+  if (format === 'archidekt') return toArchidektList(commander, deck)
+  if (format === 'simple') return toSimpleList(commander, deck)
+  return toMoxfieldList(commander, deck)
 }
 
 export async function copyText(text: string): Promise<boolean> {

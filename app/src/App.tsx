@@ -3,6 +3,7 @@ import { CollectionProvider } from './context/CollectionContext'
 import { Layout } from './components/Layout'
 import { CollectionPage } from './pages/CollectionPage'
 import { DeckBuilderPage } from './pages/DeckBuilderPage'
+import { PlaytesterPage } from './pages/PlaytesterPage'
 import { RulesPage } from './pages/RulesPage'
 import './index.css'
 
@@ -16,6 +17,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<CollectionPage />} />
             <Route path="/mazos" element={<DeckBuilderPage />} />
+            <Route path="/probar" element={<PlaytesterPage />} />
             <Route path="/normas" element={<RulesPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

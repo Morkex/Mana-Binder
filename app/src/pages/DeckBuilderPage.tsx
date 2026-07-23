@@ -1,10 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import type { Card } from '../types'
 import { useCollection } from '../context/CollectionContext'
 import { CardFace, ColorPips } from '../components/CardFace'
 import { CardPreviewModal } from '../components/CardPreviewModal'
 import { CommanderFilterPanel } from '../components/CommanderFilterPanel'
+import { CommanderSuggestions } from '../components/CommanderSuggestions'
 import { DeckAnalyzer } from '../components/DeckAnalyzer'
+import { DeckImportPanel } from '../components/DeckImportPanel'
 import { DeckViewer } from '../components/DeckViewer'
 import { groupCardsByColorThenType } from '../lib/grouping'
 import { autoBuildDeck } from '../lib/autoDeck'
@@ -18,13 +21,16 @@ import {
   type CommanderFilters,
 } from '../lib/commanderFilters'
 import { buildCommanderProfile } from '../lib/commanderProfile'
+import { fetchEdhrecCommander } from '../lib/edhrec'
 import { isOllamaAvailable } from '../lib/ollamaClient'
 import {
   copyText,
   downloadTextFile,
+  formatDeckList,
   safeFilename,
-  toMoxfieldList,
+  type ExportFormat,
 } from '../lib/exportDeck'
+import type { ImportDeckResult } from '../lib/importDeck'
 import {
   fitsColorIdentity,
   identityString,
@@ -43,7 +49,36 @@ import {
 type Step = 'commander' | 'build'
 type PreviewMode = 'commander-pick' | 'pool' | 'maybe' | 'deck' | 'commander-view'
 
+function reconstructBasicFromId(id: string, pool: Card[]): Card | undefined {
+  const m = id.match(/virtual-basic-([a-z]+)/i)
+  if (!m) return undefined
+  const nameMap: Record<string, string> = {
+    plains: 'Plains',
+    island: 'Island',
+    swamp: 'Swamp',
+    mountain: 'Mountain',
+    forest: 'Forest',
+    wastes: 'Wastes',
+  }
+  const name = nameMap[m[1].toLowerCase()]
+  if (!name) return undefined
+  const color =
+    name === 'Plains'
+      ? ['W']
+      : name === 'Island'
+        ? ['U']
+        : name === 'Swamp'
+          ? ['B']
+          : name === 'Mountain'
+            ? ['R']
+            : name === 'Forest'
+              ? ['G']
+              : []
+  return makeBasicLandCopies(color, 1, pool).find((c) => c.name === name)
+}
+
 export function DeckBuilderPage() {
+  const navigate = useNavigate()
   const { cards, savedDecks, saveDeck, deleteDeck, loading, error } = useCollection()
   const [step, setStep] = useState<Step>('commander')
   const [commander, setCommander] = useState<Card | null>(null)
@@ -64,6 +99,7 @@ export function DeckBuilderPage() {
   const [deckNotes, setDeckNotes] = useState('')
   const [ollamaOk, setOllamaOk] = useState<boolean | null>(null)
   const [preview, setPreview] = useState<{ card: Card; mode: PreviewMode } | null>(null)
+  const [exportFormat, setExportFormat] = useState<ExportFormat>('moxfield')
   const clickTimer = useRef<number | null>(null)
 
   useEffect(() => {
@@ -247,14 +283,26 @@ export function DeckBuilderPage() {
     setDeckCards((prev) => prev.filter((c) => c.name !== name))
   }
 
-  const runAuto = () => {
+  const runAuto = async () => {
     if (!commander) return
     setAiStrategy(null)
-    const built = autoBuildDeck(commander, cards, targetBracket)
+    showToast('Generando mazo (heurística + EDHREC si hay red)…')
+    let boost: Map<string, number> | undefined
+    try {
+      const meta = await fetchEdhrecCommander(commander.name)
+      boost = new Map()
+      for (const c of meta.cards) {
+        const score = Math.round(c.synergy * 80 + c.inclusion * 25)
+        if (score > 0) boost.set(c.name.toLowerCase(), score)
+      }
+    } catch {
+      /* offline / CORS — pure heuristic */
+    }
+    const built = autoBuildDeck(commander, cards, targetBracket, { edhrecBoost: boost })
     setDeckCards(built)
     const est = analyzeDeck(commander, built).bracket
     showToast(
-      `Mazo B${targetBracket} · estimado B${est.bracket} (${est.gameChangerCount} GC) · ${built.length + 1} cartas`,
+      `Mazo B${targetBracket} · estimado B${est.bracket} (${est.gameChangerCount} GC) · ${built.length + 1} cartas${boost ? ' · +EDHREC' : ''}`,
     )
   }
 
@@ -299,13 +347,16 @@ export function DeckBuilderPage() {
     showToast('Guardado en el navegador (local)')
   }
 
-  const handleCopyMoxfield = async () => {
+  const handleCopyExport = async () => {
     if (!commander || !deckCards.length) {
       showToast('Añade cartas al mazo antes de exportar')
       return
     }
-    const ok = await copyText(toMoxfieldList(commander, deckCards))
-    showToast(ok ? 'Lista copiada — pégala en Moxfield' : 'No se pudo copiar')
+    const text = formatDeckList(commander, deckCards, exportFormat)
+    const ok = await copyText(text)
+    const label =
+      exportFormat === 'moxfield' ? 'Moxfield' : exportFormat === 'archidekt' ? 'Archidekt' : 'lista'
+    showToast(ok ? `Lista copiada — pégala en ${label}` : 'No se pudo copiar')
   }
 
   const handleDownloadTxt = () => {
@@ -313,8 +364,31 @@ export function DeckBuilderPage() {
       showToast('Añade cartas al mazo antes de exportar')
       return
     }
-    downloadTextFile(safeFilename(deckName || commander.name), toMoxfieldList(commander, deckCards))
+    downloadTextFile(
+      safeFilename(deckName || commander.name),
+      formatDeckList(commander, deckCards, exportFormat),
+    )
     showToast('Archivo .txt descargado')
+  }
+
+  const applyImport = (result: ImportDeckResult, name: string) => {
+    if (!result.commander) {
+      showToast('No se pudo resolver el comandante en tu colección')
+      return
+    }
+    setCommander(result.commander)
+    setDeckCards(result.deck)
+    setMaybeCards(result.maybeboard)
+    setDeckName(name)
+    setDeckNotes(
+      result.missing.length
+        ? `Importado · faltan en colección:\n${result.missing.slice(0, 30).join('\n')}`
+        : 'Importado desde lista externa',
+    )
+    setAiStrategy(null)
+    setStep('build')
+    const miss = result.missing.length ? ` · ${result.missing.length} no encontradas` : ''
+    showToast(`Importado: ${result.deck.length + 1} cartas${miss}`)
   }
 
   const exportSaved = async (id: string, mode: 'copy' | 'download') => {
@@ -325,10 +399,11 @@ export function DeckBuilderPage() {
       showToast('No se encontró el comandante')
       return
     }
+    // Preserve basic land copies (do not uniqueByName)
     const list = saved.cardIds
-      .map((cid) => cards.find((c) => c.id === cid))
+      .map((cid) => cards.find((c) => c.id === cid) ?? reconstructBasicFromId(cid, cards))
       .filter((c): c is Card => Boolean(c))
-    const text = toMoxfieldList(cmd, uniqueByName(list))
+    const text = formatDeckList(cmd, list, 'moxfield')
     if (mode === 'copy') {
       showToast((await copyText(text)) ? `Copiado: ${saved.name}` : 'No se pudo copiar')
     } else {
@@ -346,7 +421,7 @@ export function DeckBuilderPage() {
       return
     }
     const loaded = saved.cardIds
-      .map((cid) => cards.find((c) => c.id === cid))
+      .map((cid) => cards.find((c) => c.id === cid) ?? reconstructBasicFromId(cid, cards))
       .filter((c): c is Card => Boolean(c))
     setCommander(cmd)
     setDeckCards(loaded)
@@ -389,7 +464,7 @@ export function DeckBuilderPage() {
             <section className="saved-decks">
               <h2>Mazos guardados</h2>
               <p className="saved-decks__hint">
-                “Guardar” solo queda en este PC/navegador. Usa Copiar o .txt para Moxfield.
+                “Guardar” solo queda en este PC/navegador. Usa Copiar o .txt para Moxfield / Archidekt.
               </p>
               <ul>
                 {savedDecks.map((d) => {
@@ -417,6 +492,10 @@ export function DeckBuilderPage() {
               </ul>
             </section>
           )}
+
+          <section className="import-section">
+            <DeckImportPanel pool={cards} onImported={applyImport} />
+          </section>
 
           <div className="toolbar">
             <input
@@ -557,6 +636,15 @@ export function DeckBuilderPage() {
           </div>
         )}
 
+        <CommanderSuggestions
+          commander={commander}
+          pool={cards}
+          deckCards={deckCards}
+          onAdd={(card) => addCard(card)}
+          onMaybe={(card) => addToMaybe(card)}
+          onPreview={(card) => setPreview({ card, mode: 'pool' })}
+        />
+
         <div className="deck-stats">
           <div>
             <strong>{analysis.total}</strong>
@@ -570,9 +658,27 @@ export function DeckBuilderPage() {
 
         <div className="export-box">
           <p className="export-box__title">Exportar mazo</p>
+          <div className="seg export-box__formats">
+            {(
+              [
+                ['moxfield', 'Moxfield'],
+                ['archidekt', 'Archidekt'],
+                ['simple', 'Simple'],
+              ] as const
+            ).map(([fmt, label]) => (
+              <button
+                key={fmt}
+                type="button"
+                className={exportFormat === fmt ? 'is-on' : ''}
+                onClick={() => setExportFormat(fmt)}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
           <div className="deck-actions">
-            <button type="button" className="btn btn--primary" onClick={handleCopyMoxfield} disabled={!canExport}>
-              Copiar para Moxfield
+            <button type="button" className="btn btn--primary" onClick={() => void handleCopyExport()} disabled={!canExport}>
+              Copiar lista
             </button>
             <button type="button" className="btn btn--primary" onClick={handleDownloadTxt} disabled={!canExport}>
               Descargar .txt
@@ -584,7 +690,7 @@ export function DeckBuilderPage() {
         </div>
 
         <div className="deck-actions">
-          <button type="button" className="btn btn--primary" onClick={runAuto} disabled={aiLoading}>
+          <button type="button" className="btn btn--primary" onClick={() => void runAuto()} disabled={aiLoading}>
             Auto-generar mazo (B{targetBracket})
           </button>
         </div>
@@ -649,6 +755,23 @@ export function DeckBuilderPage() {
             disabled={!deckCards.length}
           >
             Ver mazo / scores
+          </button>
+          <button
+            type="button"
+            className="btn btn--primary"
+            disabled={!commander || deckCards.length < 20}
+            onClick={() => {
+              if (!commander) return
+              navigate('/probar', {
+                state: {
+                  commanderId: commander.id,
+                  cardIds: deckCards.map((c) => c.id),
+                  deckName: deckName || commander.name,
+                },
+              })
+            }}
+          >
+            Probar mazo (goldfish)
           </button>
           <button type="button" className="btn" onClick={handleSave} disabled={!deckCards.length}>
             Guardar en app

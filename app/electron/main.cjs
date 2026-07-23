@@ -1,9 +1,20 @@
-const { app, BrowserWindow, shell } = require('electron')
+const { app, BrowserWindow, shell, session } = require('electron')
 const path = require('path')
 
 const isDev = !app.isPackaged
 
 function createWindow() {
+  // Allow EDHREC JSON from the renderer (no official CORS headers).
+  session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
+    if (!details.url.includes('json.edhrec.com')) {
+      callback({ responseHeaders: details.responseHeaders })
+      return
+    }
+    const headers = { ...details.responseHeaders }
+    headers['Access-Control-Allow-Origin'] = ['*']
+    callback({ responseHeaders: headers })
+  })
+
   const win = new BrowserWindow({
     width: 1440,
     height: 900,

@@ -56,6 +56,16 @@ export default defineConfig({
     port: 5173,
     strictPort: true,
     host: '127.0.0.1',
+    proxy: {
+      '/api/edhrec': {
+        target: 'https://json.edhrec.com',
+        changeOrigin: true,
+        rewrite: (p) => p.replace(/^\/api\/edhrec/, ''),
+        headers: {
+          'User-Agent': 'ManaBinder/1.0 (local deckbuilder)',
+        },
+      },
+    },
   },
   base: './',
 })

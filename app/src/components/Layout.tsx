@@ -32,6 +32,12 @@ export function Layout({ children }: { children: ReactNode }) {
             Constructor Commander
           </NavLink>
           <NavLink
+            to="/probar"
+            className={({ isActive }) => (isActive ? 'nav__link is-active' : 'nav__link')}
+          >
+            Probador
+          </NavLink>
+          <NavLink
             to="/normas"
             className={({ isActive }) => (isActive ? 'nav__link is-active' : 'nav__link')}
           >

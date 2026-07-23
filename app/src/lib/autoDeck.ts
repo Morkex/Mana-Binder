@@ -70,9 +70,11 @@ export function autoBuildDeck(
   commander: Card,
   pool: Card[],
   targetBracket: Bracket = 3,
+  options: { edhrecBoost?: Map<string, number> } = {},
 ): Card[] {
   const recipe = RECIPES[targetBracket]
   const profile = buildCommanderProfile(commander)
+  const boost = options.edhrecBoost
 
   let legal = uniqueByName(
     withUnlimitedBasics(
@@ -91,12 +93,14 @@ export function autoBuildDeck(
   }
 
   const scored = legal
-    .map((card) => ({
-      card,
-      score: scoreCard(card, commander, targetBracket, profile),
-      syn: synergyScore(card, profile),
-    }))
-    .sort((a, b) => b.score - a.score)
+    .map((card) => {
+      const base = scoreCard(card, commander, targetBracket, profile)
+      const syn = synergyScore(card, profile)
+      const meta = boost?.get(card.name.toLowerCase()) ?? 0
+      // EDHREC: synergy ~0.05–0.35 and inclusion; boost is precomputed 0–40
+      return { card, score: base + meta, syn: syn + meta * 0.5 }
+    })
+    .sort((a, b) => b.score - a.score || b.syn - a.syn)
 
   const used = new Set<string>([commander.name.toLowerCase()])
   const deck: Card[] = []
