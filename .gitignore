@@ -38,3 +38,4 @@ npm-debug.log*
 .cache/
 tmp/
 temp/
+app/tmp-*.txt
