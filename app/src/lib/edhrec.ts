@@ -45,9 +45,12 @@ export function edhrecSlug(commanderName: string): string {
 }
 
 function edhrecBaseUrl(): string {
-  // Dev: Vite proxy. Prod/Electron: direct (Electron main patches CORS).
-  if (typeof window !== 'undefined' && window.location.hostname === '127.0.0.1') {
-    return '/api/edhrec'
+  // En desarrollo (Vite) siempre proxy local — evita CORS.
+  // Electron carga http://localhost:5173; el check por hostname debe incluir localhost.
+  if (import.meta.env.DEV) return '/api/edhrec'
+  if (typeof window !== 'undefined') {
+    const host = window.location.hostname
+    if (host === '127.0.0.1' || host === 'localhost') return '/api/edhrec'
   }
   return 'https://json.edhrec.com'
 }
@@ -130,11 +133,19 @@ export async function fetchEdhrecCommander(commanderName: string): Promise<Edhre
   if (cached && Date.now() - cached.at < CACHE_MS) return cached.data
 
   const url = `${edhrecBaseUrl()}/pages/commanders/${slug}.json`
-  const res = await fetch(url, {
-    headers: { Accept: 'application/json' },
-    signal: AbortSignal.timeout(20_000),
-  })
-  if (!res.ok) throw new Error(`EDHREC ${res.status} para ${slug}`)
+  let res: Response
+  try {
+    res = await fetch(url, {
+      headers: { Accept: 'application/json' },
+      signal: AbortSignal.timeout(20_000),
+    })
+  } catch (err) {
+    const reason = err instanceof Error ? err.message : 'error de red'
+    throw new Error(
+      `No se pudo conectar con EDHREC (${reason}). Comprueba la red o reinicia la app con Vite en marcha.`,
+    )
+  }
+  if (!res.ok) throw new Error(`EDHREC respondió ${res.status} para «${slug}»`)
   const raw = await res.json()
   const data = parseCommanderPayload(raw, slug)
   memoryCache.set(slug, { at: Date.now(), data })
