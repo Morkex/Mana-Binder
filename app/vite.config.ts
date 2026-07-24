@@ -65,6 +65,14 @@ export default defineConfig({
           'User-Agent': 'ManaBinder/1.0 (local deckbuilder)',
         },
       },
+      '/api/scryfall': {
+        target: 'https://api.scryfall.com',
+        changeOrigin: true,
+        rewrite: (p) => p.replace(/^\/api\/scryfall/, ''),
+        headers: {
+          'User-Agent': 'ManaBinder/1.0 (local deckbuilder)',
+        },
+      },
     },
   },
   base: './',
