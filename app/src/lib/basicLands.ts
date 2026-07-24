@@ -142,6 +142,33 @@ export function makeBasicLandCopies(
   return out
 }
 
+const BASIC_NAME_BY_SLUG: Record<string, string> = {
+  plains: 'Plains',
+  island: 'Island',
+  swamp: 'Swamp',
+  mountain: 'Mountain',
+  forest: 'Forest',
+  wastes: 'Wastes',
+}
+
+/**
+ * Rebuild a virtual basic from an id like `virtual-basic-swamp` / `virtual-basic-swamp-3`
+ * with correct art (never reuse another card's images).
+ */
+export function resolveVirtualBasicFromId(id: string, pool: Card[] = []): Card | undefined {
+  const m = id.match(/virtual-basic-([a-z]+)/i)
+  if (!m) return undefined
+  const name = BASIC_NAME_BY_SLUG[m[1].toLowerCase()]
+  if (!name) return undefined
+
+  const byName = new Map<string, Card>()
+  for (const card of pool) {
+    if (isBasicLandName(card.name) && !byName.has(card.name)) byName.set(card.name, card)
+  }
+  const card = virtualBasic(name, byName.get(name))
+  return { ...card, id, manaboxId: id }
+}
+
 /** Count copies of each card name (for lists / export). */
 export function countByName(cards: Card[]): { name: string; count: number; card: Card }[] {
   const map = new Map<string, { name: string; count: number; card: Card }>()

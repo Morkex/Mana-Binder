@@ -43,39 +43,12 @@ import {
   isBasicLand,
   isBasicLandName,
   makeBasicLandCopies,
+  resolveVirtualBasicFromId,
   withUnlimitedBasics,
 } from '../lib/basicLands'
 
 type Step = 'commander' | 'build'
 type PreviewMode = 'commander-pick' | 'pool' | 'maybe' | 'deck' | 'commander-view'
-
-function reconstructBasicFromId(id: string, pool: Card[]): Card | undefined {
-  const m = id.match(/virtual-basic-([a-z]+)/i)
-  if (!m) return undefined
-  const nameMap: Record<string, string> = {
-    plains: 'Plains',
-    island: 'Island',
-    swamp: 'Swamp',
-    mountain: 'Mountain',
-    forest: 'Forest',
-    wastes: 'Wastes',
-  }
-  const name = nameMap[m[1].toLowerCase()]
-  if (!name) return undefined
-  const color =
-    name === 'Plains'
-      ? ['W']
-      : name === 'Island'
-        ? ['U']
-        : name === 'Swamp'
-          ? ['B']
-          : name === 'Mountain'
-            ? ['R']
-            : name === 'Forest'
-              ? ['G']
-              : []
-  return makeBasicLandCopies(color, 1, pool).find((c) => c.name === name)
-}
 
 export function DeckBuilderPage() {
   const navigate = useNavigate()
@@ -401,7 +374,7 @@ export function DeckBuilderPage() {
     }
     // Preserve basic land copies (do not uniqueByName)
     const list = saved.cardIds
-      .map((cid) => cards.find((c) => c.id === cid) ?? reconstructBasicFromId(cid, cards))
+      .map((cid) => cards.find((c) => c.id === cid) ?? resolveVirtualBasicFromId(cid, cards))
       .filter((c): c is Card => Boolean(c))
     const text = formatDeckList(cmd, list, 'moxfield')
     if (mode === 'copy') {
@@ -421,7 +394,7 @@ export function DeckBuilderPage() {
       return
     }
     const loaded = saved.cardIds
-      .map((cid) => cards.find((c) => c.id === cid) ?? reconstructBasicFromId(cid, cards))
+      .map((cid) => cards.find((c) => c.id === cid) ?? resolveVirtualBasicFromId(cid, cards))
       .filter((c): c is Card => Boolean(c))
     setCommander(cmd)
     setDeckCards(loaded)
