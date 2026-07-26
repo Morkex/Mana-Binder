@@ -176,6 +176,8 @@ export function buildSuggestions(params: {
   pool: Card[]
   deckNames: Set<string>
   onlyOwned?: boolean
+  /** Prefer owned cards first (hybrid mode). Default true when onlyOwned is false. */
+  prioritizeOwned?: boolean
   limit?: number
 }): SuggestionRow[] {
   const indexes = buildCardIndexes(params.pool)
@@ -195,7 +197,17 @@ export function buildSuggestions(params: {
       inDeck: params.deckNames.has(c.name.toLowerCase()),
       card,
     })
-    if (rows.length >= limit) break
   }
-  return rows
+
+  const prioritize = params.prioritizeOwned ?? !params.onlyOwned
+  if (prioritize) {
+    rows.sort((a, b) => {
+      const rank = (r: SuggestionRow) => (r.inDeck ? 2 : r.inCollection ? 0 : 1)
+      const d = rank(a) - rank(b)
+      if (d !== 0) return d
+      return b.synergy - a.synergy || b.inclusion - a.inclusion
+    })
+  }
+
+  return rows.slice(0, limit)
 }

@@ -1,23 +1,49 @@
 import type { DeckAnalysis } from '../lib/deckAnalysis'
 import { BRACKET_META } from '../lib/brackets'
 import { COLOR_META } from '../lib/mtg'
+import {
+  analyzeDeckHealth,
+  type DeckGoal,
+  type DeckHealth,
+} from '../lib/deckHealth'
 
 export function DeckAnalyzer({
   analysis,
   targetBracket,
+  health,
+  goal,
+  onGoalChange,
 }: {
   analysis: DeckAnalysis
   targetBracket?: number
+  health?: DeckHealth
+  goal?: DeckGoal
+  onGoalChange?: (g: DeckGoal) => void
 }) {
   const maxCurve = Math.max(1, ...analysis.curve.map((c) => c.count))
   const pipColors = (['W', 'U', 'B', 'R', 'G'] as const).filter((c) => analysis.colorPips[c] > 0)
   const b = analysis.bracket
   const meta = BRACKET_META[b.bracket]
   const overTarget = targetBracket != null && b.bracket > targetBracket
+  const healthView = health ?? analyzeDeckHealth(null, [], goal ?? 'casual')
 
   return (
     <div className="analyzer">
       <h3>Análisis</h3>
+
+      {onGoalChange && (
+        <label className="analyzer__goal">
+          Perfil
+          <select value={goal ?? 'casual'} onChange={(e) => onGoalChange(e.target.value as DeckGoal)}>
+            <option value="casual">Casual</option>
+            <option value="power7">Power ~7</option>
+            <option value="high">High power</option>
+            <option value="tribal">Tribal</option>
+            <option value="combo">Combo</option>
+            <option value="budget">Budget</option>
+          </select>
+        </label>
+      )}
 
       <div className={`bracket-badge ${overTarget ? 'is-warn' : ''}`}>
         <div className="bracket-badge__main">
@@ -41,7 +67,9 @@ export function DeckAnalyzer({
         <p className="bracket-badge__gc">
           Game Changers: <strong>{b.gameChangerCount}</strong>
           {b.gameChangers.length > 0 && (
-            <span> — {b.gameChangers.slice(0, 4).join(', ')}
+            <span>
+              {' '}
+              — {b.gameChangers.slice(0, 4).join(', ')}
               {b.gameChangers.length > 4 ? '…' : ''}
             </span>
           )}
@@ -74,6 +102,28 @@ export function DeckAnalyzer({
         </div>
       </div>
 
+      <p className="analyzer__label">Salud del mazo</p>
+      <ul className="analyzer__health">
+        {healthView.rows.map((row) => (
+          <li key={row.key} className={`is-${row.status}`}>
+            <span>
+              {row.label}{' '}
+              <em>
+                ({row.min}–{row.max})
+              </em>
+            </span>
+            <strong>{row.count}</strong>
+          </li>
+        ))}
+      </ul>
+      {healthView.gaps.length > 0 && (
+        <ul className="analyzer__gaps">
+          {healthView.gaps.map((g) => (
+            <li key={g}>{g}</li>
+          ))}
+        </ul>
+      )}
+
       <p className="analyzer__label">Mana curve (non-lands)</p>
       <div className="curve" role="img" aria-label="Curva de maná">
         {analysis.curve.map((bucket) => (
@@ -91,7 +141,7 @@ export function DeckAnalyzer({
         ))}
       </div>
 
-      <p className="analyzer__label">Roles</p>
+      <p className="analyzer__label">Roles (conteo)</p>
       <ul className="analyzer__roles">
         <li>
           <span>Ramp</span>
@@ -102,12 +152,32 @@ export function DeckAnalyzer({
           <strong>{analysis.roles.draw}</strong>
         </li>
         <li>
+          <span>Tutor</span>
+          <strong>{analysis.roles.tutor}</strong>
+        </li>
+        <li>
           <span>Removal</span>
           <strong>{analysis.roles.removal}</strong>
         </li>
         <li>
+          <span>Counters</span>
+          <strong>{analysis.roles.counter}</strong>
+        </li>
+        <li>
           <span>Wipes</span>
           <strong>{analysis.roles.boardWipe}</strong>
+        </li>
+        <li>
+          <span>Protección</span>
+          <strong>{analysis.roles.protection}</strong>
+        </li>
+        <li>
+          <span>Recursión</span>
+          <strong>{analysis.roles.recursion}</strong>
+        </li>
+        <li>
+          <span>Tokens</span>
+          <strong>{analysis.roles.tokens}</strong>
         </li>
         <li>
           <span>Creatures</span>
@@ -128,14 +198,14 @@ export function DeckAnalyzer({
       {pipColors.length > 0 && (
         <>
           <p className="analyzer__label">Pips de color (costes)</p>
-          <div className="analyzer__pips">
+          <ul className="analyzer__pips">
             {pipColors.map((c) => (
-              <span key={c} className="analyzer__pip" title={COLOR_META[c].label}>
-                <i style={{ background: COLOR_META[c].hex }} />
-                {analysis.colorPips[c]}
-              </span>
+              <li key={c} style={{ borderColor: COLOR_META[c]?.hex }}>
+                <span>{COLOR_META[c]?.short ?? c}</span>
+                <strong>{analysis.colorPips[c]}</strong>
+              </li>
             ))}
-          </div>
+          </ul>
         </>
       )}
     </div>
