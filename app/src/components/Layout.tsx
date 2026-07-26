@@ -9,7 +9,14 @@ export function Layout({ children }: { children: ReactNode }) {
     <div className="app-shell">
       <header className="topbar">
         <div className="brand">
-          <span className="brand__mark" aria-hidden />
+          <img
+            className="brand__mark"
+            src={`${import.meta.env.BASE_URL}icon-128.png`}
+            alt=""
+            width={44}
+            height={44}
+            decoding="async"
+          />
           <div>
             <p className="brand__name">Mana Binder</p>
             <p className="brand__tag">

@@ -9,6 +9,7 @@ import { CommanderSuggestions } from '../components/CommanderSuggestions'
 import { DeckAnalyzer } from '../components/DeckAnalyzer'
 import { DeckImportPanel } from '../components/DeckImportPanel'
 import { DeckViewer } from '../components/DeckViewer'
+import { DiscoverCommanders } from '../components/DiscoverCommanders'
 import { groupCardsByColorThenType } from '../lib/grouping'
 import { autoBuildDeck } from '../lib/autoDeck'
 import { agentBuildDeck } from '../lib/agentDeck'
@@ -21,8 +22,9 @@ import {
   type CommanderFilters,
 } from '../lib/commanderFilters'
 import { buildCommanderProfile } from '../lib/commanderProfile'
-import { fetchEdhrecCommander } from '../lib/edhrec'
 import { isOllamaAvailable } from '../lib/ollamaClient'
+import { DeckVersionsPanel } from '../components/DeckVersionsPanel'
+import { QuickBuildBar } from '../components/QuickBuildBar'
 import {
   copyText,
   downloadTextFile,
@@ -46,6 +48,15 @@ import {
   resolveVirtualBasicFromId,
   withUnlimitedBasics,
 } from '../lib/basicLands'
+import { analyzeDeckHealth, type DeckGoal } from '../lib/deckHealth'
+import { applyManabasePlan, planManabase } from '../lib/manabaseWizard'
+import { saveDeckVersion, buildHealthDetail } from '../lib/deckVersions'
+import { buildWishlist, estimatePurchaseImpact } from '../lib/wishlist'
+import { runHandBatch } from '../lib/goldfishSim'
+import { filterCardsByQuery } from '../lib/cardQuery'
+import { buildOwnershipIndex, getOwnership } from '../lib/ownership'
+import { buildSuggestions, fetchEdhrecCommander, loadEdhrecFromSession } from '../lib/edhrec'
+import { fetchCardPrices, formatPrice } from '../lib/scryfallPrices'
 
 type Step = 'commander' | 'build'
 type PreviewMode = 'commander-pick' | 'pool' | 'maybe' | 'deck' | 'commander-view'
@@ -73,6 +84,9 @@ export function DeckBuilderPage() {
   const [ollamaOk, setOllamaOk] = useState<boolean | null>(null)
   const [preview, setPreview] = useState<{ card: Card; mode: PreviewMode } | null>(null)
   const [exportFormat, setExportFormat] = useState<ExportFormat>('moxfield')
+  const [deckGoal, setDeckGoal] = useState<DeckGoal>('casual')
+  const [handSimNote, setHandSimNote] = useState<string | null>(null)
+  const [wishlistNote, setWishlistNote] = useState<string | null>(null)
   const clickTimer = useRef<number | null>(null)
 
   useEffect(() => {
@@ -131,13 +145,19 @@ export function DeckBuilderPage() {
   }, [cards, commander])
 
   const filteredPool = useMemo(() => {
-    const q = query.trim().toLowerCase()
+    const q = query.trim()
     if (!q) return legalPool
+    if (/t:|role:|mv|cmc|owned|ci[=:<]/i.test(q)) {
+      return filterCardsByQuery(legalPool, q, {
+        ownedIds: new Set(legalPool.map((c) => c.id)),
+      })
+    }
+    const lower = q.toLowerCase()
     return legalPool.filter(
       (c) =>
-        c.name.toLowerCase().includes(q) ||
-        c.typeLine.toLowerCase().includes(q) ||
-        c.oracleText.toLowerCase().includes(q),
+        c.name.toLowerCase().includes(lower) ||
+        c.typeLine.toLowerCase().includes(lower) ||
+        c.oracleText.toLowerCase().includes(lower),
     )
   }, [legalPool, query])
 
@@ -150,6 +170,14 @@ export function DeckBuilderPage() {
   const deckCounts = useMemo(() => countByName(deckCards), [deckCards])
   const inMaybe = useMemo(() => new Set(maybeCards.map((c) => c.name.toLowerCase())), [maybeCards])
   const analysis = useMemo(() => analyzeDeck(commander, deckCards), [commander, deckCards])
+  const health = useMemo(
+    () => analyzeDeckHealth(commander, deckCards, deckGoal),
+    [commander, deckCards, deckGoal],
+  )
+  const ownershipIndex = useMemo(
+    () => buildOwnershipIndex(cards, savedDecks),
+    [cards, savedDecks],
+  )
   const canExport = Boolean(commander && deckCards.length > 0)
   const cmdProfile = useMemo(
     () => (commander ? buildCommanderProfile(commander) : null),
@@ -256,6 +284,24 @@ export function DeckBuilderPage() {
     setDeckCards((prev) => prev.filter((c) => c.name !== name))
   }
 
+  useEffect(() => {
+    if (step !== 'build' || !preview) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return
+      if (e.key === 'Enter' && preview.mode === 'pool' && !inDeck.has(preview.card.name.toLowerCase())) {
+        e.preventDefault()
+        addCard(preview.card)
+      }
+      if (e.key === 'Backspace' && preview.mode === 'deck') {
+        e.preventDefault()
+        removeCard(preview.card.name)
+        setPreview(null)
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [step, preview, inDeck])
+
   const runAuto = async () => {
     if (!commander) return
     setAiStrategy(null)
@@ -311,13 +357,74 @@ export function DeckBuilderPage() {
 
   const handleSave = () => {
     if (!commander) return
-    saveDeck({
-      name: deckName || `Mazo ${commander.name}`,
+    const name = deckName || `Mazo ${commander.name}`
+    const existing = savedDecks.find((d) => d.commanderId === commander.id && d.name === name)
+    const id = existing?.id ?? crypto.randomUUID()
+    const payload = {
+      id,
+      name,
       commanderId: commander.id,
       cardIds: deckCards.map((c) => c.id),
       notes: deckNotes,
-    })
-    showToast('Guardado en el navegador (local)')
+      updatedAt: new Date().toISOString(),
+    }
+    saveDeck(payload)
+    const detail = buildHealthDetail(health, deckCards, new Set(cards.map((c) => c.id)))
+    saveDeckVersion(payload, undefined, health, detail)
+    showToast('Guardado + snapshot de versión')
+  }
+
+  const applyManabase = () => {
+    if (!commander) return
+    const plan = planManabase({ commander, deck: deckCards, collection: cards })
+    setDeckCards(applyManabasePlan(deckCards, plan, cards))
+    showToast(plan.summary.join(' · '))
+  }
+
+  const runWishlist = async () => {
+    if (!commander) return
+    try {
+      const edh =
+        loadEdhrecFromSession(commander.name) ?? (await fetchEdhrecCommander(commander.name))
+      const suggestions = buildSuggestions({
+        edhrec: edh,
+        pool: legalPool,
+        deckNames: inDeck,
+        onlyOwned: false,
+        prioritizeOwned: true,
+        limit: 50,
+      })
+      const items = buildWishlist({
+        health,
+        suggestions,
+        commander,
+        pool: legalPool,
+        deckIds: new Set(deckCards.map((c) => c.id)),
+        limit: 8,
+      })
+      const prices = await fetchCardPrices(items.map((i) => i.name))
+      setWishlistNote(
+        items.length
+          ? items
+              .map((i) => {
+                const impactHint = i.card ? estimatePurchaseImpact(i.card, health) : ''
+                const price = formatPrice(prices.get(i.name.split('//')[0].trim().toLowerCase()))
+                return `• ${i.name} (impacto ${i.impact}${price ? ` · ${price}` : ''})${i.replaces ? ` · sustituto owned: ${i.replaces}` : ''}\n  ${i.reason}${impactHint ? `\n  → ${impactHint}` : ''}`
+              })
+              .join('\n')
+          : 'Sin wishlist clara todavía.',
+      )
+    } catch (err) {
+      setWishlistNote(err instanceof Error ? err.message : 'Error wishlist')
+    }
+  }
+
+  const runHands = () => {
+    if (!deckCards.length) return
+    const batch = runHandBatch(deckCards, 100)
+    setHandSimNote(
+      `100 manos: keep ${(batch.keepRate * 100).toFixed(0)}% · lands media ${batch.avgLands.toFixed(1)} · 0 lands ${(batch.zeroLandRate * 100).toFixed(0)}% · flood ${(batch.allLandRate * 100).toFixed(0)}%`,
+    )
   }
 
   const handleCopyExport = async () => {
@@ -470,6 +577,12 @@ export function DeckBuilderPage() {
             <DeckImportPanel pool={cards} onImported={applyImport} />
           </section>
 
+          <DiscoverCommanders
+            cards={cards}
+            onSelect={selectCommander}
+            onPreview={(card) => schedulePreview(card, 'commander-pick')}
+          />
+
           <div className="toolbar">
             <input
               type="search"
@@ -618,6 +731,30 @@ export function DeckBuilderPage() {
           onPreview={(card) => setPreview({ card, mode: 'pool' })}
         />
 
+        <QuickBuildBar
+          commander={commander}
+          deckCount={deckCards.length}
+          targetBracket={targetBracket}
+          healthGaps={health.gaps}
+          handSimNote={handSimNote}
+          wishlistNote={wishlistNote}
+          onAuto={() => void runAuto()}
+          onManabase={applyManabase}
+          onWishlist={() => void runWishlist()}
+          onHands={runHands}
+          onSave={handleSave}
+          onPlaytest={() => {
+            navigate('/probar', {
+              state: {
+                commanderId: commander.id,
+                cardIds: deckCards.map((c) => c.id),
+                deckName: deckName || commander.name,
+              },
+            })
+          }}
+          busy={aiLoading}
+        />
+
         <div className="deck-stats">
           <div>
             <strong>{analysis.total}</strong>
@@ -666,7 +803,28 @@ export function DeckBuilderPage() {
           <button type="button" className="btn btn--primary" onClick={() => void runAuto()} disabled={aiLoading}>
             Auto-generar mazo (B{targetBracket})
           </button>
+          <button type="button" className="btn" onClick={applyManabase} disabled={!commander}>
+            Manabase wizard
+          </button>
+          <button type="button" className="btn" onClick={() => void runWishlist()} disabled={!commander}>
+            Wishlist
+          </button>
+          <button type="button" className="btn" onClick={runHands} disabled={deckCards.length < 20}>
+            Simular 100 manos
+          </button>
         </div>
+        {handSimNote && <p className="export-box__hint">{handSimNote}</p>}
+        {wishlistNote && (
+          <pre className="wishlist-box">{wishlistNote}</pre>
+        )}
+
+        <DeckVersionsPanel
+          deckId={
+            savedDecks.find((d) => d.commanderId === commander.id && d.name === (deckName || `Mazo ${commander.name}`))
+              ?.id ?? `draft-${commander.id}`
+          }
+          cards={cards}
+        />
 
         <div className="ai-panel">
           <button
@@ -764,7 +922,13 @@ export function DeckBuilderPage() {
         </div>
 
         {deckCards.length > 0 && (
-          <DeckAnalyzer analysis={analysis} targetBracket={targetBracket} />
+          <DeckAnalyzer
+            analysis={analysis}
+            targetBracket={targetBracket}
+            health={health}
+            goal={deckGoal}
+            onGoalChange={setDeckGoal}
+          />
         )}
 
         <div className="deck-list">
@@ -849,7 +1013,7 @@ export function DeckBuilderPage() {
           <input
             type="search"
             className="pool-search"
-            placeholder="Filtrar pool…"
+            placeholder="Filtrar: texto o t:ramp mv<=3 owned ci<=wg"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
@@ -955,6 +1119,9 @@ export function DeckBuilderPage() {
         <CardPreviewModal
           card={preview.card}
           onClose={() => setPreview(null)}
+          extraMeta={
+            <p className="ownership-label">{getOwnership(ownershipIndex, preview.card).label}</p>
+          }
           actions={
             preview.mode === 'pool' ? (
               <>

@@ -49,7 +49,9 @@ export function CollectionProvider({ children }: { children: ReactNode }) {
         setLoading(false)
       })
       .catch((err: Error) => {
-        setError(err.message)
+        const tip =
+          ' Coloca «coleccion_organizada» junto al .exe (o en la raíz del repo) y genera el JSON con python actualizar_coleccion.py.'
+        setError(`${err.message}.${tip}`)
         setLoading(false)
       })
   }, [])
