@@ -6,6 +6,7 @@ import { analyzeDeck } from '../lib/deckAnalysis'
 import { scoreDeckCards } from '../lib/autoDeck'
 import type { ScoreBreakdown } from '../lib/cardScore'
 import { detailImageUrl, imageUrl, getPrimaryType, rarityLabel } from '../lib/mtg'
+import { roleShort } from '../lib/cardRoles'
 import { CardDetailBody } from './CardDetailBody'
 import { DeckAnalyzer } from './DeckAnalyzer'
 import { isGameChanger } from '../lib/gameChangers'
@@ -170,8 +171,22 @@ export function DeckViewer({
               <option value="all">Todos los roles</option>
               <option value="ramp">Ramp</option>
               <option value="draw">Robo</option>
+              <option value="tutor">Tutor</option>
               <option value="removal">Removal</option>
+              <option value="counter">Counter</option>
               <option value="wipe">Wipes</option>
+              <option value="protection">Protección</option>
+              <option value="recursion">Recursión</option>
+              <option value="reanimation">Reanimación</option>
+              <option value="sac_outlet">Sac outlet</option>
+              <option value="tokens">Tokens</option>
+              <option value="blink">Blink</option>
+              <option value="treasure">Treasure</option>
+              <option value="anthem">Anthem</option>
+              <option value="lifegain">Lifegain</option>
+              <option value="mill">Mill</option>
+              <option value="discard">Discard</option>
+              <option value="wincon">Wincon</option>
               <option value="creature">Creatures</option>
               <option value="planeswalker">Planeswalkers</option>
               <option value="land">Lands</option>
@@ -205,7 +220,7 @@ export function DeckViewer({
                   </div>
                   <div className="viewer-card__tags">
                     {row.score.roles.slice(0, 3).map((r) => (
-                      <em key={r}>{r}</em>
+                      <em key={r}>{roleShort(r)}</em>
                     ))}
                     {isGameChanger(row.card.name) && <em className="is-gc">GC</em>}
                   </div>
@@ -250,7 +265,7 @@ export function DeckViewer({
                       <td>{row.score.synergy}</td>
                       <td>{row.score.utility}</td>
                       <td>{row.score.curve}</td>
-                      <td>{row.score.roles.join(', ') || '—'}</td>
+                      <td>{row.score.roles.map(roleShort).join(', ') || '—'}</td>
                       <td className="notes-cell">
                         {row.score.synergyNotes.slice(0, 2).join(' · ') || '—'}
                         {isGameChanger(row.card.name) ? ' · GC' : ''}
@@ -327,7 +342,7 @@ function CardLightbox({
                     Game Changer: <strong>{score.gameChanger}</strong>
                   </li>
                 </ul>
-                {score.roles.length > 0 && <p>Roles: {score.roles.join(', ')}</p>}
+                {score.roles.length > 0 && <p>Roles: {score.roles.map(roleShort).join(', ')}</p>}
                 {score.synergyNotes.length > 0 && <p>Notas: {score.synergyNotes.join(' · ')}</p>}
               </div>
             )}

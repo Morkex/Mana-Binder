@@ -1,5 +1,6 @@
 import type { Card } from '../types'
 import { estimateBracket, type BracketEstimate } from './brackets'
+import { detectCardRoles, type CardRole } from './cardRoles'
 import { getPrimaryType } from './mtg'
 
 export interface DeckAnalysis {
@@ -16,29 +17,20 @@ export interface DeckAnalysis {
     removal: number
     boardWipe: number
     creatures: number
+    tutor: number
+    counter: number
+    protection: number
+    recursion: number
+    tokens: number
   }
+  /** Conteo completo por cada CardRole. */
+  roleCounts: Partial<Record<CardRole, number>>
   colorPips: Record<string, number>
   bracket: BracketEstimate
 }
 
 function isLand(card: Card): boolean {
   return getPrimaryType(card.typeLine) === 'Land'
-}
-
-function roleFlags(card: Card) {
-  const text = `${card.oracleText} ${card.keywords.join(' ')}`.toLowerCase()
-  return {
-    ramp:
-      !isLand(card) &&
-      /add \{|search your library for (a|up to).*land|sol ring|signet|talisman|mana rock|cultivate|rampant growth|kodama's reach/i.test(
-        text,
-      ),
-    draw: /draw (a|one|two|three|x) card|scry [2-9]|investigate/i.test(text),
-    removal: /destroy target|exile target|deal \d+ damage to (any target|target creature)|counter target/i.test(
-      text,
-    ),
-    boardWipe: /destroy all|each creature gets|all creatures|wrath|board wipe/i.test(text),
-  }
 }
 
 function countManaPips(manaCost: string): Record<string, number> {
@@ -76,16 +68,36 @@ export function analyzeDeck(commander: Card | null, deck: Card[]): DeckAnalysis 
     byTypeMap[t] = (byTypeMap[t] ?? 0) + 1
   }
 
-  const roles = { ramp: 0, draw: 0, removal: 0, boardWipe: 0, creatures: 0 }
+  const roleCounts: Partial<Record<CardRole, number>> = {}
+  const roles = {
+    ramp: 0,
+    draw: 0,
+    removal: 0,
+    boardWipe: 0,
+    creatures: 0,
+    tutor: 0,
+    counter: 0,
+    protection: 0,
+    recursion: 0,
+    tokens: 0,
+  }
   const colorPips: Record<string, number> = { W: 0, U: 0, B: 0, R: 0, G: 0 }
 
   for (const card of all) {
-    const flags = roleFlags(card)
-    if (flags.ramp) roles.ramp += 1
-    if (flags.draw) roles.draw += 1
-    if (flags.removal) roles.removal += 1
-    if (flags.boardWipe) roles.boardWipe += 1
-    if (getPrimaryType(card.typeLine) === 'Creature') roles.creatures += 1
+    const detected = detectCardRoles(card)
+    for (const r of detected) {
+      roleCounts[r] = (roleCounts[r] ?? 0) + 1
+    }
+    if (detected.includes('ramp')) roles.ramp += 1
+    if (detected.includes('draw')) roles.draw += 1
+    if (detected.includes('removal')) roles.removal += 1
+    if (detected.includes('wipe')) roles.boardWipe += 1
+    if (detected.includes('creature')) roles.creatures += 1
+    if (detected.includes('tutor')) roles.tutor += 1
+    if (detected.includes('counter')) roles.counter += 1
+    if (detected.includes('protection')) roles.protection += 1
+    if (detected.includes('recursion') || detected.includes('reanimation')) roles.recursion += 1
+    if (detected.includes('tokens')) roles.tokens += 1
 
     const pips = countManaPips(card.manaCost)
     for (const c of Object.keys(colorPips)) {
@@ -116,6 +128,7 @@ export function analyzeDeck(commander: Card | null, deck: Card[]): DeckAnalysis 
       .map(([type, count]) => ({ type, count }))
       .sort((a, b) => b.count - a.count),
     roles,
+    roleCounts,
     colorPips,
     bracket: estimateBracket(commander, deck),
   }

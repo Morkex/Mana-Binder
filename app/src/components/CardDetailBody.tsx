@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import type { Card } from '../types'
 import { getCardFaces, isMultiFaceCard } from '../lib/cardFaces'
+import { detectCardRoles, roleShort } from '../lib/cardRoles'
 import { ColorPips, ManaCost } from './CardFace'
 
 export function CardDetailBody({
@@ -17,6 +18,7 @@ export function CardDetailBody({
   const [faceIndex, setFaceIndex] = useState(0)
   const active = faces[faceIndex] ?? faces[0]
   const [imgSrc, setImgSrc] = useState(active.imageDetail)
+  const roles = useMemo(() => detectCardRoles(card), [card])
 
   useEffect(() => {
     setFaceIndex(0)
@@ -99,6 +101,15 @@ export function CardDetailBody({
             )}
             {active.loyalty != null && <span>Loyalty {active.loyalty}</span>}
           </p>
+        )}
+        {roles.length > 0 && (
+          <div className="card-detail__roles" aria-label="Roles de deckbuilding">
+            {roles.map((r) => (
+              <span key={r} className={`card-role-tag card-role-tag--${r}`}>
+                {roleShort(r)}
+              </span>
+            ))}
+          </div>
         )}
         {active.oracleText ? (
           <p className="detail-modal__text">{active.oracleText}</p>

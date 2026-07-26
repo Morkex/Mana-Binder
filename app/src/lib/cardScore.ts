@@ -5,6 +5,7 @@ import {
   type CommanderProfile,
   synergyBreakdown,
 } from './commanderProfile'
+import { detectCardRoles, hasRole, type CardRole } from './cardRoles'
 import { isGameChanger } from './gameChangers'
 import { getPrimaryType } from './mtg'
 
@@ -19,64 +20,21 @@ export interface ScoreBreakdown {
   synergyNotes: string[]
 }
 
-/** Detección de roles más estricta (evita falsos positivos). */
+/** @deprecated Prefer detectCardRoles from cardRoles — kept for callers. */
 export function detectRoles(card: Card): string[] {
-  const type = getPrimaryType(card.typeLine)
-  const text = card.oracleText
-  const name = card.name
-  const roles: string[] = []
-
-  if (type === 'Land') {
-    roles.push('land')
-    return roles
-  }
-
-  if (
-    /\{T\}: add|adds? \{[WUBRGC0-9/]+\}|search your library for (a |up to \w+ )?basic land|search your library for .{0,40}land card|sol ring|arcane signet|cultivate|kodama's reach|rampant growth|farseek|nature's lore|three visits/i.test(
-      `${text} ${name}`,
-    )
-  ) {
-    roles.push('ramp')
-  }
-
-  if (
-    /draw (a|one|two|three) cards?|draw x cards|scry [2-9]|investigate/i.test(text) &&
-    !/whenever .* deals combat damage.*draw/i.test(text)
-  ) {
-    roles.push('draw')
-  }
-
-  if (
-    /destroy target (creature|permanent|artifact|enchantment)|exile target (creature|permanent)|counter target (spell|activated|triggered)|deal \d+ damage to (any target|target creature|target player)/i.test(
-      text,
-    )
-  ) {
-    roles.push('removal')
-  }
-
-  if (/destroy all creatures|each creature|all creatures get|wrath|day of judgment|damnation|blasphemous act/i.test(text)) {
-    roles.push('wipe')
-  }
-
-  if (type === 'Creature') roles.push('creature')
-  if (type === 'Planeswalker') roles.push('planeswalker')
-  if (type === 'Artifact' && !roles.includes('ramp')) roles.push('artifact')
-  if (type === 'Enchantment') roles.push('enchantment')
-
-  return roles
+  return detectCardRoles(card)
 }
 
 export function isRamp(card: Card): boolean {
-  return detectRoles(card).includes('ramp')
+  return hasRole(card, 'ramp')
 }
 
 export function isDraw(card: Card): boolean {
-  return detectRoles(card).includes('draw')
+  return hasRole(card, 'draw')
 }
 
 export function isInteraction(card: Card): boolean {
-  const roles = detectRoles(card)
-  return roles.includes('removal') || roles.includes('wipe')
+  return hasRole(card, 'removal') || hasRole(card, 'wipe') || hasRole(card, 'counter')
 }
 
 interface BracketWeights {
@@ -94,12 +52,31 @@ const WEIGHTS: Record<Bracket, BracketWeights> = {
   5: { synergyWeight: 0.8, utilityWeight: 1.4, rarityWeight: 0.45, preferLowCmc: 1.55 },
 }
 
+const UTILITY_POINTS: Partial<Record<CardRole, number>> = {
+  ramp: 12,
+  draw: 9,
+  tutor: 8,
+  removal: 10,
+  wipe: 6,
+  counter: 9,
+  protection: 7,
+  recursion: 5,
+  reanimation: 6,
+  sac_outlet: 4,
+  tokens: 4,
+  blink: 4,
+  treasure: 5,
+  anthem: 4,
+  wincon: 5,
+  land: 4,
+}
+
 /**
  * Puntuación revisada:
  * - Sin foil ni precio de compra
  * - Rareza con poco peso
  * - Planeswalkers sin bonus extra (solo si tienen utilidad/sinergia real)
- * - Roles más estrictos
+ * - Roles vía cardRoles (Oracle rules)
  */
 export function scoreCardDetailed(
   card: Card,
@@ -110,16 +87,14 @@ export function scoreCardDetailed(
   const prof = profile ?? buildCommanderProfile(commander)
   const w = WEIGHTS[bracket]
   const type = getPrimaryType(card.typeLine)
-  const roles = detectRoles(card)
+  const roles = detectCardRoles(card)
   const synInfo = synergyBreakdown(card, prof)
 
   let utility = 0
-  if (roles.includes('ramp')) utility += 12
-  if (roles.includes('draw')) utility += 9
-  if (roles.includes('removal')) utility += 10
-  if (roles.includes('wipe')) utility += 6
+  for (const role of roles) {
+    utility += UTILITY_POINTS[role] ?? 0
+  }
   if (roles.includes('creature') && synInfo.total > 0) utility += 2
-  if (roles.includes('land')) utility += 4
 
   // Planeswalker: sin bonus por ser PW; solo roles reales arriba
   if (type === 'Planeswalker' && synInfo.total < 10 && utility < 8) {
