@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import type { Card } from '../types'
 import { useCollection } from '../context/CollectionContext'
 import { CardPreviewModal } from '../components/CardPreviewModal'
-import { resolveVirtualBasicFromId } from '../lib/basicLands'
+import { isBasicLand, resolveVirtualBasicFromId } from '../lib/basicLands'
 import {
   addToken,
   adjustCounter,
@@ -46,6 +46,9 @@ import {
   type StackItem,
   type ZoneId,
 } from '../lib/playtest'
+import { appendPlayMetrics, loadPlayMetrics, detectManaIssues } from '../lib/goldfishSim'
+import { detectCardRoles } from '../lib/cardRoles'
+import { getPrimaryType } from '../lib/mtg'
 
 interface NavState {
   commanderId?: string
@@ -397,6 +400,13 @@ export function PlaytesterPage() {
   const [mullCount, setMullCount] = useState(0)
   const [libraryTopHidden, setLibraryTopHidden] = useState(true)
   const [zoom, setZoom] = useState<PlayObject | null>(null)
+  const [turnFirstRamp, setTurnFirstRamp] = useState<number | null>(null)
+  const [turnCommander, setTurnCommander] = useState<number | null>(null)
+  const [turnFirstRemoval, setTurnFirstRemoval] = useState<number | null>(null)
+  const [turnFirstThreat, setTurnFirstThreat] = useState<number | null>(null)
+  const [metricsNote, setMetricsNote] = useState<string | null>(null)
+
+  const deckKey = setup?.name ?? 'deck'
 
   useEffect(() => {
     if (!state || !setup) return
@@ -410,20 +420,54 @@ export function PlaytesterPage() {
     return () => window.clearTimeout(t)
   }, [state, setup])
 
-  const onDropCard = useCallback((id: string, zone: ZoneId) => {
-    setState((prev) => {
-      if (!prev) return prev
+  const trackCast = useCallback(
+    (prev: PlayState, id: string): PlayState => {
       const obj = prev.objects.find((o) => o.id === id)
-      if (
-        (zone === 'battlefield' || zone === 'stack') &&
-        obj &&
-        (obj.zone === 'hand' || obj.zone === 'command')
-      ) {
-        return castSpell(prev, id)
+      const next = castSpell(prev, id)
+      if (!obj || next === prev) return next
+      if (obj.zone === 'command' && turnCommander == null) {
+        setTurnCommander(prev.turn)
       }
-      return moveObject(prev, id, zone)
-    })
-  }, [])
+      if (obj.card) {
+        const roles = detectCardRoles(obj.card)
+        if (turnFirstRamp == null && roles.includes('ramp')) {
+          setTurnFirstRamp(prev.turn)
+        }
+        if (
+          turnFirstRemoval == null &&
+          (roles.includes('removal') || roles.includes('counter') || roles.includes('wipe'))
+        ) {
+          setTurnFirstRemoval(prev.turn)
+        }
+        const isThreat =
+          roles.includes('wincon') ||
+          (getPrimaryType(obj.card.typeLine) === 'Creature' && (obj.card.cmc ?? 0) >= 4)
+        if (turnFirstThreat == null && isThreat) {
+          setTurnFirstThreat(prev.turn)
+        }
+      }
+      return next
+    },
+    [turnCommander, turnFirstRamp, turnFirstRemoval, turnFirstThreat],
+  )
+
+  const onDropCard = useCallback(
+    (id: string, zone: ZoneId) => {
+      setState((prev) => {
+        if (!prev) return prev
+        const obj = prev.objects.find((o) => o.id === id)
+        if (
+          (zone === 'battlefield' || zone === 'stack') &&
+          obj &&
+          (obj.zone === 'hand' || obj.zone === 'command')
+        ) {
+          return trackCast(prev, id)
+        }
+        return moveObject(prev, id, zone)
+      })
+    },
+    [trackCast],
+  )
 
   const begin = (resume?: PlayState) => {
     if (resume) {
@@ -432,7 +476,52 @@ export function PlaytesterPage() {
     }
     if (!setup) return
     setMullCount(0)
+    setTurnFirstRamp(null)
+    setTurnCommander(null)
+    setTurnFirstRemoval(null)
+    setTurnFirstThreat(null)
+    setMetricsNote(null)
     setState(startHand(createPlayState(setup.commander, setup.deck)))
+  }
+
+  const saveSessionMetrics = () => {
+    if (!setup || !state) return
+    const hand = objectsIn(state, 'hand')
+    const bf = objectsIn(state, 'battlefield')
+    const landsInHand = hand.filter(
+      (o) => o.card && (getPrimaryType(o.card.typeLine) === 'Land' || isBasicLand(o.card)),
+    ).length
+    const landsOnBattle = bf.filter(
+      (o) => o.card && (getPrimaryType(o.card.typeLine) === 'Land' || isBasicLand(o.card) || isLandObject(o)),
+    ).length
+    const { manaScrew, manaFlood } = detectManaIssues({
+      turn: state.turn,
+      landsInHand,
+      landsOnBattle,
+      handSize: hand.length,
+    })
+    appendPlayMetrics({
+      at: Date.now(),
+      deckKey,
+      mulligans: mullCount,
+      turnCommander,
+      turnFirstRamp,
+      turnFirstRemoval,
+      turnFirstThreat,
+      manaScrew,
+      manaFlood,
+      notes: `T${state.turn} · fase ${state.phase}`,
+    })
+    const hist = loadPlayMetrics(deckKey)
+    const avgMull =
+      hist.length > 0 ? hist.reduce((s, e) => s + e.mulligans, 0) / hist.length : mullCount
+    const cmdTurns = hist.map((e) => e.turnCommander).filter((t): t is number => t != null)
+    const avgCmd =
+      cmdTurns.length > 0 ? cmdTurns.reduce((a, b) => a + b, 0) / cmdTurns.length : turnCommander
+    const screwRate = hist.filter((e) => e.manaScrew).length / Math.max(1, hist.length)
+    setMetricsNote(
+      `Guardado · mull ×${mullCount} (media ${avgMull.toFixed(1)}) · cmd T${turnCommander ?? '—'} (media ${avgCmd != null ? Number(avgCmd).toFixed(1) : '—'}) · ramp T${turnFirstRamp ?? '—'} · removal T${turnFirstRemoval ?? '—'} · amenaza T${turnFirstThreat ?? '—'} · ${manaScrew ? 'screw ' : ''}${manaFlood ? 'flood ' : ''}· screw ${(screwRate * 100).toFixed(0)}% · ${hist.length} partidas`,
+    )
   }
 
   if (loading) return <div className="state">Cargando…</div>
@@ -587,6 +676,14 @@ export function PlaytesterPage() {
           </button>
           <button
             type="button"
+            className="btn"
+            onClick={saveSessionMetrics}
+            title="Guarda mulligans, turno del comandante y primer ramp"
+          >
+            Guardar métricas
+          </button>
+          <button
+            type="button"
             className="btn btn--ghost"
             onClick={() => {
               clearSavedPlayState()
@@ -600,6 +697,18 @@ export function PlaytesterPage() {
           </button>
         </div>
       </header>
+
+      {(metricsNote ||
+        turnCommander != null ||
+        turnFirstRamp != null ||
+        turnFirstRemoval != null ||
+        turnFirstThreat != null ||
+        mullCount > 0) && (
+        <p className="playtest__metrics">
+          {metricsNote ??
+            `Sesión: mulligan ×${mullCount} · cmd T${turnCommander ?? '—'} · ramp T${turnFirstRamp ?? '—'} · removal T${turnFirstRemoval ?? '—'} · amenaza T${turnFirstThreat ?? '—'}`}
+        </p>
+      )}
 
       <div className="playtest__resources">
         {(
@@ -686,7 +795,7 @@ export function PlaytesterPage() {
               onDoubleClick={(e) => {
                 e.preventDefault()
                 setZoom(null)
-                setState(castSpell(state, o.id))
+                setState(trackCast(state, o.id))
               }}
             >
               {o.image ? <img src={o.image} alt={o.name} draggable={false} /> : o.name}
@@ -812,7 +921,7 @@ export function PlaytesterPage() {
             <HandCard
               key={o.id}
               obj={o}
-              onPlay={(id) => setState(castSpell(state, id))}
+              onPlay={(id) => setState(trackCast(state, id))}
               onZoom={setZoom}
             />
           ))}
@@ -840,7 +949,7 @@ export function PlaytesterPage() {
                   type="button"
                   className="btn btn--primary"
                   onClick={() => {
-                    setState(castSpell(state, zoom.id))
+                    setState(trackCast(state, zoom.id))
                     setZoom(null)
                   }}
                 >
