@@ -1,0 +1,14 @@
+Mana Binder — colección
+
+La carpeta «coleccion_organizada» NO va dentro del instalador (pesa mucho).
+
+1. En el PC de desarrollo genera la colección:
+   python actualizar_coleccion.py
+
+2. Copia «coleccion_organizada» COMPLETA al lado de este .exe
+   (debe existir coleccion_organizada\coleccion_maestra.json).
+
+3. Abre Mana Binder.
+
+Opcional: variable de entorno
+  MANA_BINDER_COLLECTION=C:\ruta\completa\coleccion_organizada

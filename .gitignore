@@ -1,6 +1,7 @@
 # Dependencias y builds
 app/node_modules/
 app/dist/
+app/release/
 **/__pycache__/
 *.pyc
 .Python

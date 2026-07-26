@@ -2,9 +2,13 @@ const { app, BrowserWindow, shell, session, nativeImage, dialog } = require('ele
 const path = require('path')
 const fs = require('fs')
 const http = require('http')
+const { startLocalServer, resolveCollectionRoot } = require('./localServer.cjs')
 
 const isDev = !app.isPackaged
 const DEV_URL = 'http://127.0.0.1:5173'
+
+/** @type {import('http').Server | null} */
+let localServer = null
 
 function resolveAppIcon() {
   const candidates = [
@@ -51,46 +55,63 @@ async function waitForDevServer(maxAttempts = 60) {
   return false
 }
 
+async function startPackagedServer() {
+  const distHtml = path.join(__dirname, '../dist/index.html')
+  if (!fs.existsSync(distHtml)) {
+    throw new Error(
+      'No hay build en app/dist. Ejecuta: npm run build\n' +
+        'O usa npm run electron:dev para desarrollo.',
+    )
+  }
+  const started = await startLocalServer(app)
+  localServer = started.server
+  return started
+}
+
+function warnMissingCollection(win, collectionRoot) {
+  dialog.showMessageBox(win, {
+    type: 'warning',
+    title: 'Mana Binder — Colección no encontrada',
+    message: 'No se encontró coleccion_maestra.json',
+    detail:
+      'Coloca la carpeta «coleccion_organizada» junto al ejecutable:\n\n' +
+      `${path.dirname(process.execPath)}\\coleccion_organizada\\\n\n` +
+      'Ruta buscada:\n' +
+      `${collectionRoot}\n\n` +
+      'También puedes definir la variable de entorno MANA_BINDER_COLLECTION\n' +
+      'apuntando a esa carpeta.\n\n' +
+      'Genera la colección con: python actualizar_coleccion.py',
+  })
+}
+
 async function loadApp(win) {
+  // Desarrollo: preferir Vite
   if (isDev) {
     const ready = await waitForDevServer()
     if (ready) {
       await win.loadURL(DEV_URL)
       return
     }
-
-    const distHtml = path.join(__dirname, '../dist/index.html')
-    if (fs.existsSync(distHtml)) {
-      await win.loadFile(distHtml)
-      dialog.showMessageBox(win, {
-        type: 'warning',
-        title: 'Mana Binder',
-        message: 'No se encontró el servidor de desarrollo (Vite).',
-        detail:
-          'Se cargó la build estática (dist). La colección puede no cargar.\n\n' +
-          'Usa el acceso directo “Mana Binder” o ejecuta:\n' +
-          '  npm run electron:dev\n' +
-          'desde la carpeta app.',
-      })
-      return
-    }
-
-    dialog.showErrorBox(
-      'Mana Binder no pudo arrancar',
-      'Vite no está en marcha en http://127.0.0.1:5173 y no hay build en dist/.\n\n' +
-        'Abre la app con el acceso directo del escritorio, o en una terminal:\n' +
-        '  cd "Desktop\\Mana Binder\\app"\n' +
-        '  npm run electron:dev',
-    )
-    app.quit()
-    return
   }
 
-  await win.loadFile(path.join(__dirname, '../dist/index.html'))
+  // Empaquetado o fallback: servidor local (UI + colección + proxies)
+  let warnedCollection = false
+  try {
+    const { port, collectionRoot, collectionOk } = await startPackagedServer()
+    await win.loadURL(`http://127.0.0.1:${port}`)
+    if (!collectionOk && !warnedCollection) {
+      warnedCollection = true
+      const show = () => warnMissingCollection(win, collectionRoot)
+      if (win.isVisible()) show()
+      else win.once('ready-to-show', show)
+    }
+  } catch (err) {
+    dialog.showErrorBox('Mana Binder no pudo arrancar', String(err))
+    app.quit()
+  }
 }
 
 function createWindow() {
-  // Allow EDHREC JSON from the renderer (no official CORS headers).
   session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
     if (!details.url.includes('json.edhrec.com')) {
       callback({ responseHeaders: details.responseHeaders })
@@ -119,7 +140,6 @@ function createWindow() {
   })
 
   win.setMenuBarVisibility(false)
-
   win.once('ready-to-show', () => win.show())
 
   win.webContents.setWindowOpenHandler(({ url }) => {
@@ -140,9 +160,31 @@ if (process.platform === 'win32') {
 app.whenReady().then(createWindow)
 
 app.on('window-all-closed', () => {
+  if (localServer) {
+    try {
+      localServer.close()
+    } catch {
+      /* ignore */
+    }
+    localServer = null
+  }
   if (process.platform !== 'darwin') app.quit()
 })
 
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) createWindow()
 })
+
+// Evitar que queden procesos zombie del server
+app.on('before-quit', () => {
+  if (localServer) {
+    try {
+      localServer.close()
+    } catch {
+      /* ignore */
+    }
+  }
+})
+
+// Export util para tests / scripts
+module.exports = { resolveCollectionRoot }
