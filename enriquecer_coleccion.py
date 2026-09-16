@@ -64,6 +64,8 @@ EXTRA_FIELDS = [
     "Image URL art",
     "Image local",
     "Image local HQ",
+    "Image local back",
+    "Image local HQ back",
 ]
 
 

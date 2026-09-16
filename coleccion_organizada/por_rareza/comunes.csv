@@ -1,5 +1,6 @@
 Name,Set code,Set name,Collector number,Foil,Rarity,Quantity,ManaBox ID,Scryfall ID,Purchase price,Misprint,Altered,Condition,Language,Purchase price currency,Added
 Abandon Attachments,TLA,Avatar: The Last Airbender,205,normal,common,2,108228,74ca45a4-97ab-4255-9129-884e8b42b984,0.07,false,false,near_mint,en,EUR,2025-11-26T15:34:18.488Z
+Abrade,2XM,Double Masters,114,normal,common,1,52104,24da9431-7e52-44f5-bc18-2f2d8a4ca81e,0.15,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Abraded Bluffs,OTJ,Outlaws of Thunder Junction,251,normal,common,1,93074,19e96521-b4ce-4a36-a887-200e05ccc804,0.19,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Abundant Growth,AVR,Avacyn Restored,167,normal,common,1,18111,afbc8fd0-dc15-4ac9-b97b-173f7fb66ed7,0.45,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Abzan Devotee,TDM,Tarkir: Dragonstorm,68,normal,common,1,104305,66555946-e747-46fa-b1ac-b103a8edcd93,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
@@ -19,6 +20,7 @@ Airship Engine Room,TLA,Avatar: The Last Airbender,265,normal,common,1,109375,0b
 Airtight Alibi,MKM,Murders at Karlov Manor,149,normal,common,2,91173,bffbbe21-0a1d-48b9-903e-81c109aa11de,0.08,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Ajani's Response,SOS,Secrets of Strixhaven,6,normal,common,2,112654,9cd1417a-badc-4abd-a8ca-5b31f85c1072,0.09,false,false,near_mint,es,EUR,2026-04-19T19:45:43.727Z
 Ajani's Response,SOS,Secrets of Strixhaven,6,normal,common,1,112654,9cd1417a-badc-4abd-a8ca-5b31f85c1072,0.03,false,false,near_mint,en,EUR,2026-05-08T10:13:36.508Z
+Akki Scrapchomper,MOM,March of the Machine,130,normal,common,1,81435,b0e02737-0193-46e4-a506-cec86a44dc99,0.1,false,false,near_mint,en,EUR,2026-07-27T10:14:10.735Z
 Alacrian Jaguar,DFT,Aetherdrift,152,normal,common,1,103456,2bd40bca-aa54-4e52-8d48-b3709a11e633,0.05,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Alania's Pathmaker,BLB,Bloomburrow,123,normal,common,3,96123,d3871fe6-e26e-4ab4-bd81-7e3c7b8135c1,0.04,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Alchemist's Apprentice,AVR,Avacyn Restored,42,normal,common,3,18236,31abba67-1241-4fb3-88b5-4c4668ec5f25,0.07,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
@@ -40,9 +42,11 @@ Apothecary Stomper,FDN,Foundations,99,normal,common,2,101537,680b7b0c-0e1b-46ce-
 Appeal to Eirdu,ECL,Lorwyn Eclipsed,5,normal,common,1,110356,68ce9752-21f9-48e9-bf48-7f76f1cecbc5,0.02,false,false,near_mint,en,EUR,2026-01-25T20:47:46.804Z
 Aquitect's Defenses,ECL,Lorwyn Eclipsed,44,normal,common,1,110799,9af9a907-fd2e-4ae0-ac7b-529074b79a14,0.05,false,false,near_mint,en,EUR,2026-01-25T20:47:46.739Z
 Arashin Sunshield,TDM,Tarkir: Dragonstorm,3,normal,common,1,105168,dd7102d8-90b3-45a1-b66d-dcca469b1fb6,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Arcane Denial,LTC,Tales of Middle-earth Commander,184,normal,common,1,83220,7e0cc18d-c6b8-4db1-ac07-0f17ae6d6c95,2.38,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Arcane Signet,BLC,Bloomburrow Commander,127,normal,common,1,96215,28180667-cc1e-4f64-9a69-00425ef85ba0,0.38,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Arcane Signet,ELD,Throne of Eldraine,331,normal,common,1,46040,84128e98-87d6-4c2f-909b-9435a7833e63,0.72,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Arcane Signet,EOC,Edge of Eternities Commander,53,normal,common,1,107001,3d994115-378d-4685-a5dc-e448831da434,0.51,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
+Arcane Signet,SCD,Starter Commander Decks,257,normal,common,1,77222,02cb9420-fbfb-4123-a830-a992ff470db6,0.49,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Armasaur Guide,FDN,Foundations,3,normal,common,2,101591,c80fc380-0499-4499-8a60-c43844c02c9b,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Armored Armadillo,OTJ,Outlaws of Thunder Junction,3,normal,common,1,93094,263232df-69b8-4205-93ad-c724fe57ec11,0.14,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Armored Kincaller,LCI,The Lost Caverns of Ixalan,174,normal,common,1,88834,b76a46a1-a63e-460a-98c5-699dd1c827aa,0.03,false,false,near_mint,en,EUR,2025-06-16T17:24:56.249Z
@@ -77,12 +81,13 @@ Basilica Stalker,MKM,Murders at Karlov Manor,78,normal,common,3,91336,fdafea8f-2
 Battle Hymn,AVR,Avacyn Restored,128,normal,common,1,18150,43b5d46e-7054-44f8-9a14-b412f2f0ab86,1.92,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Beamsaw Prospector,EOE,Edge of Eternities,89,normal,common,2,107734,6f717a3f-c6db-4e8d-8b62-6361ab33d000,0.15,false,false,near_mint,en,EUR,2025-08-01T19:16:32.510Z
 Bearer of Glory,TDM,Tarkir: Dragonstorm,4,normal,common,1,104365,d6d91e42-43db-428d-a4dd-ef9d40306314,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
-Beast-Kin Ranger,FDN,Foundations,100,normal,common,1,100082,0102e0be-5783-4825-9489-713b1b1df0b2,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Beast-Kin Ranger,FDN,Foundations,100,normal,common,2,100082,0102e0be-5783-4825-9489-713b1b1df0b2,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Beau,TOTJ,Outlaws of Thunder Junction Tokens,6,normal,common,1,93926,f1751016-9461-4250-ac07-afe4f5b41095,1.07,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 "Beetle, Legacy Criminal",SPM,Marvel's Spider-Man,26,normal,common,1,107658,a194f930-c99f-4915-8a62-e20ab2b4ad1f,0.05,false,false,near_mint,en,EUR,2025-09-30T23:51:40.191Z
 Bellowing Crier,BLB,Bloomburrow,42,normal,common,3,96119,ca2215dd-6300-49cf-b9b2-3a840b786c31,0.02,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Benthic Criminologists,MKM,Murders at Karlov Manor,40,foil,common,1,90736,283b6b5a-acdf-4255-a294-0964d9c62686,0.05,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Bestow Greatness,DFT,Aetherdrift,155,normal,common,1,103234,b6a5adee-3482-4c5b-9260-58efa8fec5ba,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Big Score,PLST,The List,SNC-102,normal,common,1,98025,90f8a36e-2129-4bd4-870a-a998afaec199,0.65,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Bigfin Bouncer,FDN,Foundations,31,foil,common,1,100882,9b1d5b76-b07e-45c6-800d-4cfce085164f,0.09,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Bigfin Bouncer,FDN,Foundations,31,normal,common,2,100882,9b1d5b76-b07e-45c6-800d-4cfce085164f,0.06,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Biosynthic Burst,EOE,Edge of Eternities,173,normal,common,2,107732,6d73a4a8-5d52-4c12-a96a-45cd202bcc62,0.14,false,false,near_mint,en,EUR,2025-08-01T19:16:32.510Z
@@ -188,6 +193,7 @@ Combat Tutorial,FIN,Final Fantasy,48,normal,common,1,106679,ec195607-ac30-4931-a
 Comet Crawler,EOE,Edge of Eternities,92,normal,common,1,107766,becca990-ab2e-4aa4-be7d-293ec727cb08,0.14,false,false,near_mint,en,EUR,2025-08-02T12:05:52.876Z
 Command Bridge,EOE,Edge of Eternities,252,normal,common,2,106926,247670d2-a7cd-4ed7-9c77-704c7962b815,0.13,false,false,near_mint,en,EUR,2025-08-01T19:16:32.510Z
 Command Tower,BLC,Bloomburrow Commander,130,normal,common,1,96318,63a39996-48b7-42bb-9759-a42382ee0468,0.24,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
+Command Tower,C16,Commander 2016,286,normal,common,1,7068,6a759aca-50a4-44ba-8a9d-a764da55bfb7,0.47,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Command Tower,ELD,Throne of Eldraine,333,normal,common,1,46038,ec1f1041-f667-4b73-b1f2-e5bcae84095e,0.56,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Command Tower,EOC,Edge of Eternities Commander,59,normal,common,1,107080,85eb4b03-305b-45a4-82e5-5fcd586cc744,0.2,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Command Tower,FDC,Foundations Commander,3,foil,common,1,100615,667b6c3b-75cc-4adf-b205-80925ca76d2a,1.11,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
@@ -221,6 +227,7 @@ Cryogen Relic,EOE,Edge of Eternities,52,normal,common,3,107466,7bfb33b6-e2bf-498
 Cryoshatter,EOE,Edge of Eternities,53,normal,common,1,107738,7b62b1e2-9e43-4a66-a647-7e5de2871f2a,0.14,false,false,near_mint,en,EUR,2025-08-02T12:05:52.876Z
 Crypt Creeper,AVR,Avacyn Restored,91,normal,common,1,18187,0382cb94-0836-4e23-99b7-034faa363203,0.07,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Crypt Feaster,FDN,Foundations,59,normal,common,2,100382,3b072811-998a-4a71-b59c-6afecc0dc4b6,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Crystal Carapace,MOM,March of the Machine,183,normal,common,1,81460,e1888c61-dc2d-4a33-9ba4-439d97f490be,0.06,false,false,near_mint,en,EUR,2026-07-26T15:29:12.945Z
 Cultivate,EOC,Edge of Eternities Commander,95,normal,common,1,107071,7ee610ee-7711-4a6b-b441-d6c73e6ef2b4,0.48,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Cycle of Renewal,TLA,Avatar: The Last Airbender,170,normal,common,1,109398,233f4a05-057b-48f4-8f56-8d4a060a40e4,0.11,false,false,near_mint,en,EUR,2025-11-26T15:34:18.488Z
 Daily Bugle Reporters,SPM,Marvel's Spider-Man,6,normal,common,1,107633,530dbeb0-b0cd-473e-a43e-7b23c88650a3,0.05,false,false,near_mint,en,EUR,2025-09-30T23:51:40.191Z
@@ -233,10 +240,12 @@ Dauntless Survivor,ZNR,Zendikar Rising,184,normal,common,4,54548,52b1b4a2-52a7-4
 Dawn's Light Archer,ECL,Lorwyn Eclipsed,174,normal,common,1,110771,76e80656-6bcb-4d99-8bd2-ca5f75f40daf,0.05,false,false,near_mint,en,EUR,2026-01-25T20:47:46.785Z
 Dazzling Angel,FDN,Foundations,9,normal,common,1,101468,027dc444-e544-4693-8653-3dcdda530162,0.09,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Deadeye Duelist,OTJ,Outlaws of Thunder Junction,119,normal,common,1,93403,e9a50b7a-8741-4520-8d45-8e6b128c2628,0.02,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
+Deadly Derision,MOM,March of the Machine,99,normal,common,1,81022,1ec1a02f-128c-44aa-b708-6fcda34b40c0,0.05,false,false,near_mint,en,EUR,2026-07-27T10:14:10.725Z
 Deadly Precision,TLA,Avatar: The Last Airbender,95,normal,common,1,109422,4661daf6-d960-4278-8946-70948efaf99d,0.07,false,false,near_mint,en,EUR,2025-11-26T15:34:18.488Z
 Deathless Pilot,DFT,Aetherdrift,82,normal,common,1,103655,e704fb95-17b7-432a-831c-18abe7d9cc73,0.08,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Decode Transmissions,EOE,Edge of Eternities,94,normal,common,2,107166,cecb4936-14ca-49f9-b209-6519cab54b30,0.09,false,false,near_mint,en,EUR,2025-08-01T19:16:32.510Z
 Deduce,MKM,Murders at Karlov Manor,52,normal,common,1,90996,7cbb17af-e17e-438a-ad72-0c942e6706b6,0.06,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Deep Analysis,NCC,New Capenna Commander,218,normal,common,1,68248,64904c29-e0e4-4ecd-af0a-89a820899108,0.16,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Defang,AVR,Avacyn Restored,15,normal,common,2,18263,f12fee0b-c237-4188-a718-1572f72c63ba,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Defenestrated Phantom,MKM,Murders at Karlov Manor,11,normal,common,1,91037,8b284304-c3bf-4413-9fd3-b44eb4eb642a,0.03,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Delta Bloodflies,TDM,Tarkir: Dragonstorm,77,normal,common,1,104457,119bb72d-aed9-47dc-9285-7bc836cc3776,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
@@ -254,7 +263,7 @@ Dimir Guildgate,GTC,Gatecrash,241,normal,common,1,16583,4951bf75-1a88-4c85-b4e9-
 Diplomatic Relations,EOE,Edge of Eternities,177,normal,common,1,107778,e0a104c5-61fb-4733-97ab-a31a15a49443,0.14,false,false,near_mint,en,EUR,2025-08-01T19:16:32.510Z
 Dirgur Island Dragon // Skimming Strike,TDM,Tarkir: Dragonstorm,40,normal,common,1,104342,b1d21a9a-6b0c-4fbc-a427-81be885d326b,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Disenchant,PLST,The List,M20-14,normal,common,1,49277,239932a9-13fc-4e94-8b05-9d58795a0bcf,0.15,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
-Dismal Backwater,FDN,Foundations,261,foil,common,1,101220,dbb0df36-8467-4a41-8e1c-6c3584d4fd10,0.05,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Dismal Backwater,FDN,Foundations,261,foil,common,2,101220,dbb0df36-8467-4a41-8e1c-6c3584d4fd10,0.05,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Dismal Backwater,FDN,Foundations,261,normal,common,1,101220,dbb0df36-8467-4a41-8e1c-6c3584d4fd10,0.09,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Dismal Backwater,PLST,The List,KTK-232,normal,common,2,47691,a01d98d3-a999-414b-8f29-636cacd8019b,0.19,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Dismal Backwater,TDM,Tarkir: Dragonstorm,254,normal,common,1,104238,082b52c9-c46e-44d3-b723-546ba528e07b,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
@@ -315,12 +324,13 @@ Elite Interceptor // Rejoinder,SOS,Secrets of Strixhaven,12,normal,common,1,1125
 Embrace the Paradox,SOS,Secrets of Strixhaven,186,normal,common,1,112679,c0cf5e0f-3668-46f2-850d-d91a538e8ead,0.09,false,false,near_mint,en,EUR,2026-05-08T10:13:36.487Z
 Encampment Keeper,PLST,The List,XLN-11,normal,common,1,49263,5eb32517-6bd8-4918-b3f8-70c5cf512d7c,0.05,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Endrider Catalyzer,DFT,Aetherdrift,124,normal,common,2,103052,55a5a67b-d969-4ba4-9dcc-32d0c2e5c04a,0.09,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Enduring Bondwarden,MOM,March of the Machine,14,normal,common,1,81468,eb0680eb-ceca-44d9-9654-78ea2ccfce17,0.07,false,false,near_mint,en,EUR,2026-07-26T15:29:12.944Z
 Engine Rat,DFT,Aetherdrift,84,normal,common,1,103579,949d6137-98d3-4f46-ab1e-08d7492af307,0.09,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Enraged Flamecaster,ECL,Lorwyn Eclipsed,135,normal,common,1,110686,104baa2c-75c5-44fc-a3b9-b19efcf3d7c2,0.05,false,false,near_mint,en,EUR,2026-01-25T20:47:46.726Z
 EPF Point Squad,TMT,Teenage Mutant Ninja Turtles,145,normal,common,1,111545,faab52c0-ce79-40af-a156-b193a62d439e,0.09,false,false,near_mint,en,EUR,2026-03-06T23:49:55.807Z
 Eriette's Lullaby,OTJ,Outlaws of Thunder Junction,10,normal,common,1,93067,184c18b6-40e2-4f7f-a3bb-49bc695b68ec,0.08,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Eroded Canyon,OTJ,Outlaws of Thunder Junction,256,normal,common,1,93177,5c9d080f-28d7-41d6-a4e0-5b3e3a5ed770,0.18,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
-Erudite Wizard,FDN,Foundations,37,normal,common,2,100835,9273c417-0fcd-4273-b24e-afff76336d0c,0.12,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Erudite Wizard,FDN,Foundations,37,normal,common,3,100835,9273c417-0fcd-4273-b24e-afff76336d0c,0.11,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Escape Tunnel,EOC,Edge of Eternities Commander,157,normal,common,1,107110,a0335da5-d754-480d-89d9-be6b8ca33fda,0.21,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Escape Tunnel,MKM,Murders at Karlov Manor,261,foil,common,1,91057,93ddde4f-d35e-4128-8f43-d0eadbd715de,0.33,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Escape Tunnel,MKM,Murders at Karlov Manor,261,normal,common,1,91057,93ddde4f-d35e-4128-8f43-d0eadbd715de,0.21,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
@@ -374,6 +384,7 @@ Flexible Waterbender,TLA,Avatar: The Last Airbender,50,normal,common,1,108163,14
 Flight-Deck Coordinator,EOE,Edge of Eternities,17,normal,common,2,107743,88cc6328-a035-4f74-b786-390e5c7c324c,0.04,false,false,near_mint,en,EUR,2025-08-01T19:16:32.510Z
 Flood the Engine,DFT,Aetherdrift,42,normal,common,1,103506,57402f7c-5d4c-4f1e-8bce-a2328a297111,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Flourishing Hunter,VOW,Innistrad: Crimson Vow,199,normal,common,2,64140,2abc54df-773d-4f46-b241-e1f42af8ab95,0.02,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Flywheel Racer,MOM,March of the Machine,259,normal,common,1,81448,c694485d-a753-4e55-929c-d8e4a53c7d08,0.13,false,false,near_mint,en,EUR,2026-07-27T10:14:10.727Z
 Focus Fire,EOE,Edge of Eternities,18,normal,common,1,107515,a9ddfcbc-0f84-4315-aaa3-ca54ff64d7de,0.13,false,false,near_mint,en,EUR,2025-08-01T19:16:32.510Z
 Focus the Mind,TDM,Tarkir: Dragonstorm,45,normal,common,1,105153,abb0ba34-6904-4c17-a04d-ea4f12c7cf21,0.07,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Foggy Swamp Hunters,TLA,Avatar: The Last Airbender,101,normal,common,1,109689,3f6e5869-ca25-4b98-a844-8a498cb40aab,0.05,false,false,near_mint,en,EUR,2025-11-26T15:34:18.488Z
@@ -451,10 +462,10 @@ Glider Kids,TLA,Avatar: The Last Airbender,21,normal,common,3,108154,0613afb5-4c
 Gnarlid Colony,FDN,Foundations,224,normal,common,2,101508,47565d10-96bf-4fb0-820f-f20a44a76b6f,0.07,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Goblin,TECL,Lorwyn Eclipsed Tokens,6,normal,common,2,110758,6139a45d-ebc7-4bca-8c13-73c85ea5fe0d,,false,false,near_mint,en,EUR,2026-01-25T20:47:46.759Z
 Goblin Assailant,M20,Core Set 2020,330,normal,common,3,45130,8cfefb65-b6e4-44a1-baa9-d3c00ee8ba96,0.11,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
-Goblin Boarders,FDN,Foundations,87,normal,common,1,101506,4409a063-bf2a-4a49-803e-3ce6bd474353,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Goblin Boarders,FDN,Foundations,87,normal,common,2,101506,4409a063-bf2a-4a49-803e-3ce6bd474353,0.05,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Goblin Maskmaker,MKM,Murders at Karlov Manor,130,normal,common,3,90917,6154a991-c602-4fca-91a3-3830060da60e,0.07,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Goblin Surprise,FDN,Foundations,200,foil,common,1,101512,527dd5d4-5f72-40bb-8a9d-1f5ac3f81e2e,0.14,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
-Goblin Surprise,FDN,Foundations,200,normal,common,2,101512,527dd5d4-5f72-40bb-8a9d-1f5ac3f81e2e,0.05,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Goblin Surprise,FDN,Foundations,200,normal,common,3,101512,527dd5d4-5f72-40bb-8a9d-1f5ac3f81e2e,0.08,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Goblin Surveyor,DFT,Aetherdrift,131,normal,common,1,103313,e1efffe9-00f8-4177-a9e6-4ad62887d32f,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 "Gohn, Town of Ruin",FIN,Final Fantasy,278,normal,common,1,106602,99582781-613e-4a33-aec7-7569b4a961aa,0.09,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
 Goldmeadow Nomad,ECL,Lorwyn Eclipsed,18,normal,common,1,110672,00ddbe6c-11de-4bc6-aabe-d6d8385a838a,0.02,false,false,near_mint,en,EUR,2026-01-25T20:47:46.799Z
@@ -477,7 +488,7 @@ Grim Javelineer,DFT,Aetherdrift,89,normal,common,2,103558,87154116-e306-4e15-bd5
 Gristle Glutton,ECL,Lorwyn Eclipsed,144,normal,common,1,110805,a4164af6-356e-4de2-8377-dbe70434a996,0.11,false,false,near_mint,en,EUR,2026-01-25T20:47:46.741Z
 Grounded for Life,TMT,Teenage Mutant Ninja Turtles,7,normal,common,2,111479,72388199-85fa-4eba-9a9c-c2904e6da9ed,0.04,false,false,near_mint,en,EUR,2026-03-06T23:49:55.739Z
 Grow Extra Arms,SPM,Marvel's Spider-Man,101,normal,common,3,107640,63fab399-00db-4398-922e-c3ca3356731a,0.08,false,false,near_mint,en,EUR,2025-09-30T23:51:40.191Z
-Grow from the Ashes,FDN,Foundations,225,normal,common,3,101502,42525f8a-aee7-4811-8f05-471b559c2c4a,0.13,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Grow from the Ashes,FDN,Foundations,225,normal,common,4,101502,42525f8a-aee7-4811-8f05-471b559c2c4a,0.12,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Gruul Guildgate,GTC,Gatecrash,243,normal,common,1,16581,99c54269-8798-4023-836f-640103e08ce0,0.1,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Guac & Marshmallow Pizza,TMT,Teenage Mutant Ninja Turtles,116,normal,common,1,111500,a5405de0-16c9-4e5a-8ceb-00508e212f12,0.09,false,false,near_mint,en,EUR,2026-03-06T23:49:55.838Z
 "Guadosalam, Farplane Gateway",FIN,Final Fantasy,281,normal,common,1,106668,dfcbc131-fd50-4908-b539-c8e52bb70c58,0.1,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
@@ -501,7 +512,7 @@ Healer's Hawk,FDN,Foundations,142,normal,common,4,101595,cc8e4563-04bb-46b5-835e
 Hecteyes,FIN,Final Fantasy,103,normal,common,1,106585,8680d052-c07b-4d9b-bda9-b5f69f44f424,0.08,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
 Heirloom Auntie,ECL,Lorwyn Eclipsed,107,normal,common,1,110623,cac251b2-d2cc-45b6-9ca8-678e0eab56ea,0.08,false,false,near_mint,en,EUR,2026-01-25T20:47:46.727Z
 Heirs of Stromkirk,AVR,Avacyn Restored,140,normal,common,1,18138,ff89ad3b-b154-49e2-a0fd-135279512250,0.1,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
-Helpful Hunter,FDN,Foundations,16,normal,common,2,97172,1b9a0e91-80b5-428f-8f08-931d0631be14,0.17,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Helpful Hunter,FDN,Foundations,16,normal,common,3,97172,1b9a0e91-80b5-428f-8f08-931d0631be14,0.16,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Heritage Reclamation,TDM,Tarkir: Dragonstorm,145,normal,common,1,104636,4f8fee37-a050-4329-8b10-46d150e7a95e,0.05,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Hero,TFIN,Final Fantasy Tokens,6,normal,common,1,106152,c39b8112-6a5c-4080-a884-2b4d6e5276ef,0.1,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
 Hero,TFIN,Final Fantasy Tokens,2,normal,common,1,106175,d0657ce1-bf75-4007-ac1b-0623eb263357,0.31,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
@@ -543,7 +554,7 @@ Imperious Inkmage,SOS,Secrets of Strixhaven,195,normal,common,1,112695,d5df1c3f-
 Incinerating Blast,FDN,Foundations,90,normal,common,2,101603,d58e20ab-c5ca-4295-884d-78efdaa83243,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Incite,M11,Magic 2011,145,normal,common,1,21244,6ba4dcc6-05a5-43e9-b445-bae83180aa79,0.15,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Infestation Sage,FDN,Foundations,64,normal,common,2,101601,d40c73de-7a5f-46f2-a70b-449bc8ecfe24,0.11,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
-Infestation Sage,FDN,Foundations,64,normal,common,1,101601,d40c73de-7a5f-46f2-a70b-449bc8ecfe24,0.11,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Infestation Sage,FDN,Foundations,64,normal,common,2,101601,d40c73de-7a5f-46f2-a70b-449bc8ecfe24,0.14,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Inkling,TSOS,Secrets of Strixhaven Tokens,7,normal,common,1,112603,43e9f729-abaf-4000-8df5-fa46d59eff9e,,false,false,near_mint,es,EUR,2026-04-19T19:45:43.726Z
 Inkling,TSOS,Secrets of Strixhaven Tokens,6,normal,common,1,112675,bab52920-9d67-4cd4-9015-6e645ff9764f,,false,false,near_mint,en,EUR,2026-05-08T10:13:36.479Z
 Inkling,TSOS,Secrets of Strixhaven Tokens,7,normal,common,1,112603,43e9f729-abaf-4000-8df5-fa46d59eff9e,,false,false,near_mint,en,EUR,2026-05-08T10:13:36.494Z
@@ -647,7 +658,7 @@ Lush Oasis,OTJ,Outlaws of Thunder Junction,261,normal,common,2,93276,988e44c5-46
 Luxknight Breacher,EOE,Edge of Eternities,26,normal,common,2,107537,c1236731-0d33-4705-8077-3cf58acf9a39,0.17,false,false,near_mint,en,EUR,2025-08-01T19:16:32.510Z
 Lys Alana Informant,ECL,Lorwyn Eclipsed,181,normal,common,1,110386,a79649c4-559e-4306-a102-5fd8750629c7,0.05,false,false,near_mint,en,EUR,2026-01-25T20:47:46.709Z
 Macabre Reconstruction,MKM,Murders at Karlov Manor,93,normal,common,1,91117,abb6184c-e3d0-4275-b25b-95e4a64b26f3,0.1,false,false,near_mint,en,EUR,2025-06-16T17:24:56.249Z
-Macabre Waltz,FDN,Foundations,177,normal,common,1,101509,4d1f3c84-89ba-4426-a80b-d524f172c912,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Macabre Waltz,FDN,Foundations,177,normal,common,2,101509,4d1f3c84-89ba-4426-a80b-d524f172c912,0.08,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Maestros Theater,EOC,Edge of Eternities Commander,167,normal,common,1,107175,d4087ba6-8227-4ec3-a989-0833ad6c8788,0.29,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Mage Tower Referee,SOS,Secrets of Strixhaven,249,normal,common,1,112568,1ceb704a-97a8-49f9-b799-30f001404144,0.1,false,false,near_mint,es,EUR,2026-04-19T19:45:43.799Z
 Mage Tower Referee,SOS,Secrets of Strixhaven,249,normal,common,1,112568,1ceb704a-97a8-49f9-b799-30f001404144,0.07,false,false,near_mint,en,EUR,2026-05-08T10:13:36.488Z
@@ -659,6 +670,7 @@ Make Your Move,FDN,Foundations,143,normal,common,4,101546,7368f861-3288-4645-90a
 Make Your Move,MKM,Murders at Karlov Manor,22,normal,common,1,90968,73475d29-2673-4614-86d3-404232426aa8,0.06,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Make Your Move,TMT,Teenage Mutant Ninja Turtles,20,normal,common,2,111537,ed8bdd98-6377-40cf-b381-cee38b1bda2a,0.1,false,false,near_mint,en,EUR,2026-03-06T23:49:55.730Z
 Makeshift Binding,MKM,Murders at Karlov Manor,23,normal,common,1,91261,e45d2e0c-d70d-40e5-8c3d-db6803393516,0.09,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Mana Geyser,TDC,Tarkir: Dragonstorm Commander,223,normal,common,1,104919,bd69539a-d5df-47b4-9785-86e20a58c72b,1.55,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Manhole Missile,TMT,Teenage Mutant Ninja Turtles,94,normal,common,1,111444,243e392b-48b0-4e90-ae22-9a696f45e878,0.07,false,false,near_mint,en,EUR,2026-03-06T23:49:55.826Z
 Many Partings,LTR,The Lord of the Rings: Tales of Middle-earth,176,normal,common,2,83528,d179dbbe-9c79-4dbc-955a-5209a3e2745a,0.1,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Marauding Blight-Priest,FDN,Foundations,178,normal,common,5,101528,5f70dafc-c638-4ec0-ab5b-62998f752720,0.08,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
@@ -691,9 +703,10 @@ Mischievous Sneakling,ECL,Lorwyn Eclipsed,235,normal,common,1,110726,3b66fa00-2f
 Mist Raven,PLST,The List,DDQ-26,normal,common,2,48920,c0ea1af2-e86d-4c62-92b1-55473b622592,0.1,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Mistmeadow Council,ECL,Lorwyn Eclipsed,183,normal,common,1,110845,d4a7c9bc-81c8-4c31-96a9-eb6ba7715e7f,0.11,false,false,near_mint,en,EUR,2026-01-25T20:47:46.682Z
 Mob Lookout,SPM,Marvel's Spider-Man,136,normal,common,2,108585,e0e3b660-d391-454b-ba57-bff4ddcf27b7,0.04,false,false,near_mint,en,EUR,2025-09-30T23:51:40.191Z
-Mocking Sprite,FDN,Foundations,159,normal,common,1,101624,f6792f63-b651-497d-8aa5-cddf4cedeca8,0.09,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Mocking Sprite,FDN,Foundations,159,normal,common,2,101624,f6792f63-b651-497d-8aa5-cddf4cedeca8,0.1,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Mocking Sprite,WOE,Wilds of Eldraine,62,normal,common,1,85788,e595014d-4ff4-4561-b7f2-a9bd56300b01,0.1,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Molten Exhale,TDM,Tarkir: Dragonstorm,113,normal,common,1,104440,0ab95aab-a4bf-4131-83a0-2c138b6f20c3,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Molten Tributary,DMU,Dominaria United,251,normal,common,1,71309,20aff4af-5128-432f-a8c8-65b6909d31ac,0.32,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Moment of Craving,PLST,The List,RIX-79,normal,common,1,48638,2589a32c-c09f-4479-ac23-4a08a984f2e7,0.06,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Monastery Messenger,TDM,Tarkir: Dragonstorm,208,normal,common,1,104443,0c9eeced-6464-41f0-bbea-05b3af4cc005,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Moogle,TFIN,Final Fantasy Tokens,11,normal,common,1,105862,295b78dc-b26d-4e92-8f75-916566c4db14,0.4,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
@@ -711,6 +724,7 @@ Mountain,FDN,Foundations,278,normal,common,70,100284,279df7e2-2a3b-464a-a7df-e91
 Mountain,FIN,Final Fantasy,304,normal,common,2,105719,d061b9a8-e95d-48ec-a1c9-337433b62dfc,0.14,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
 Mountain,FIN,Final Fantasy,303,normal,common,3,105679,a18ef64b-a9de-4548-b4d5-168758442db7,0.13,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
 Mountain,FIN,Final Fantasy,305,normal,common,2,105745,ea1735b9-fd10-4c9c-b9d3-046d8c22b852,0.05,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
+Mountain,M20,Core Set 2020,275,normal,common,7,45185,4cf7d0ad-8fe2-4065-89e3-c2ee04062695,0.03,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Mountain,MKM,Murders at Karlov Manor,284,normal,common,8,91214,cd8a0cd6-8d3b-44bd-b609-c12fb851d17b,0.17,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Mountain,OTJ,Outlaws of Thunder Junction,284,normal,common,2,93529,2237ee9b-fff6-472c-903c-11faf9bb116d,0.1,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Mountain,OTJ,Outlaws of Thunder Junction,275,normal,common,2,91794,0a7dbfd2-cda7-4fc9-9677-e442fb5f5f6f,0.2,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
@@ -731,6 +745,7 @@ Mutant Chain Reaction,TMT,Teenage Mutant Ninja Turtles,125,normal,common,2,11129
 Mutant Surveyor,DFT,Aetherdrift,98,normal,common,1,103547,7cec5105-3907-40d2-8e46-95acfaaaa0cc,0.03,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Mysidian Elder,FIN,Final Fantasy,145,normal,common,1,106566,6bc39af4-be19-4889-b930-df7ebf7b9481,0.1,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
 Mysterio's Phantasm,SPM,Marvel's Spider-Man,38,normal,common,1,108643,79aa0a78-80a2-44be-8a79-92bcba9c040f,0.03,false,false,near_mint,en,EUR,2025-09-30T23:51:40.191Z
+Mystic Sanctuary,ELD,Throne of Eldraine,247,normal,common,1,46091,170e792c-80d5-4775-ad95-37614574ab84,1.05,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Mystical Teachings,PLST,The List,MM3-44,normal,common,1,48915,dcc77acd-5596-43a2-9a3f-452d985ef4a5,0.18,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Mystical Tether,OTJ,Outlaws of Thunder Junction,19,normal,common,1,93064,18344498-952e-489c-8b03-bd1bef4c26ca,0.03,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Namazu Trader,FIN,Final Fantasy,107,normal,common,1,106248,f9d25b34-990d-416c-aef7-1b5a73f19dd4,0.06,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
@@ -800,6 +815,7 @@ Paradox Gardens,SOS,Secrets of Strixhaven,258,normal,common,1,112152,dbc3447e-13
 Pardic Swordsmith,ODY,Odyssey,213,normal,common,1,31964,44ac622c-db04-41bf-817e-4698843e6346,0.05,false,false,near_mint,en,EUR,2025-06-16T17:24:56.249Z
 Passenger Ferry,SPM,Marvel's Spider-Man,170,normal,common,2,108493,2495f477-b88c-4938-a86a-f72c3c861188,0.02,false,false,near_mint,en,EUR,2025-09-30T23:51:40.191Z
 Path of Ancestry,BLC,Bloomburrow Commander,322,normal,common,1,96359,821cb722-146d-447e-907d-dc97baa5bc4f,0.13,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
+Path of Ancestry,NCC,New Capenna Commander,419,normal,common,1,68406,cdeb7d54-053f-45ee-8062-c3c1f40d27ce,0.21,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Path to Redemption,TLA,Avatar: The Last Airbender,31,normal,common,1,108310,f936d64a-0db4-49c1-8a57-6d99e012a555,0.06,false,false,near_mint,en,EUR,2025-11-26T15:34:18.488Z
 Patient Naturalist,OTJ,Outlaws of Thunder Junction,174,normal,common,2,93082,1dd17cea-9e8c-4dba-b6ab-a6b9de87a306,0.03,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Pearl of Wisdom,BLB,Bloomburrow,64,normal,common,3,95625,13cb9575-1138-4f99-8e90-0eaf00bdf4a1,0.07,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
@@ -855,7 +871,8 @@ Predator's Gambit,AVR,Avacyn Restored,117,normal,common,1,18161,88810a96-d5f8-40
 Preening Champion,MOM,March of the Machine,73,normal,common,5,81341,44178ece-af31-4a94-88bc-c9ce43bb4573,0.03,false,false,near_mint,en,EUR,2025-06-16T17:24:56.249Z
 Prickly Pair,OTJ,Outlaws of Thunder Junction,137,normal,common,1,93398,e70f2278-8857-46e4-aa2b-fff5589b750f,0.07,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Prideful Feastling,ECL,Lorwyn Eclipsed,238,normal,common,1,110535,7578cb61-f606-4559-a10a-343a583228ab,0.05,false,false,near_mint,en,EUR,2026-01-25T20:47:46.723Z
-Prideful Parent,FDN,Foundations,21,normal,common,3,97188,b742117a-8a72-43b9-b05d-274829d138a2,0.06,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Prideful Parent,FDN,Foundations,21,normal,common,4,97188,b742117a-8a72-43b9-b05d-274829d138a2,0.06,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Prismari Campus,STX,Strixhaven: School of Mages,270,normal,common,1,58153,768120f5-9401-4e52-924e-3374bde65b3d,0.1,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Pristine Talisman,NPH,New Phyrexia,151,normal,common,1,19734,b31d96cf-7276-46c4-ad17-d6a5c85f1315,0.18,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Procrastinate,SOS,Secrets of Strixhaven,64,normal,common,1,111692,1edb449d-620f-4e21-9d76-2c840635eb9d,0.17,false,false,near_mint,es,EUR,2026-04-19T19:45:43.809Z
 Procrastinate,SOS,Secrets of Strixhaven,64,normal,common,1,111692,1edb449d-620f-4e21-9d76-2c840635eb9d,0.09,false,false,near_mint,en,EUR,2026-05-08T10:13:36.520Z
@@ -912,6 +929,7 @@ Render Speechless,SOS,Secrets of Strixhaven,220,normal,common,1,112573,25bbb1c7-
 Renegade Demon,PLST,The List,DDR-59,normal,common,2,48602,3429ca07-bb3a-4ac3-958d-4f4499ba6309,0.04,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Repeat Offender,MKM,Murders at Karlov Manor,101,normal,common,4,90651,0c2ca1e7-e0de-4d29-a81b-62185ccd295f,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Rescue Leopard,TDM,Tarkir: Dragonstorm,116,normal,common,1,105119,056136a8-84be-477c-b654-63238fb8236e,0.05,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Resculpt,STX,Strixhaven: School of Mages,51,normal,common,1,58018,1bfb1fcb-a411-4c1c-b8fc-496242ae3a9b,0.35,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Resentful Revelation,FIN,Final Fantasy,114,normal,common,1,106598,945006ea-c6a1-4ee5-abb2-387c2b6d3123,0.09,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
 Restorative Technique,MSH,Marvel Super Heroes,183,normal,common,1,114028,dbe9102d-b92b-4c32-93f6-5b6dc0fa08e6,0.06,false,false,near_mint,es,EUR,2026-06-20T00:03:25.254Z
 Retrieve the Esper,FIN,Final Fantasy,68,normal,common,1,106301,ebd733f0-8883-434a-b36c-ef76b091fe8e,0.03,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
@@ -948,6 +966,7 @@ Rubblebelt Braggart,MKM,Murders at Karlov Manor,143,normal,common,1,91322,f90f86
 Rubblebelt Maverick,MKM,Murders at Karlov Manor,174,normal,common,2,91011,81c7ff67-b9e1-4d2e-b1ae-da9b946da00b,0.2,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Rugged Highlands,FDN,Foundations,265,normal,common,2,101400,fd6eaf8e-8881-4d7b-bafc-75e4ca5cbef6,0.11,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Rugged Highlands,M21,Core Set 2021,249,normal,common,6,50913,9daef8db-56a5-4b1e-b4bf-734d0516557c,0.07,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Rugged Highlands,MOM,March of the Machine,271,normal,common,1,80443,3aeef1b1-a351-47ce-a686-a0eb0a35a894,0.08,false,false,near_mint,en,EUR,2026-07-26T15:29:12.943Z
 Rugged Highlands,TDM,Tarkir: Dragonstorm,265,normal,common,1,104267,31261eca-28ad-407c-84ef-0c124d0d7451,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Rumble Arena,TLA,Avatar: The Last Airbender,277,normal,common,1,109688,3f5d2c38-663c-4f64-8cfc-c102462e82ef,0.12,false,false,near_mint,en,EUR,2025-11-26T15:34:18.488Z
 Run Amok,PLST,The List,DOM-140,normal,common,4,48307,2938fe22-c084-44bf-8310-4a16caa0a035,0.12,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
@@ -1016,6 +1035,7 @@ Silvergill Peddler,ECL,Lorwyn Eclipsed,70,normal,common,1,110669,feba2bb6-6005-4
 Simic Guildgate,C19,Commander 2019,275,normal,common,1,45659,d4e7b715-38c5-406f-883c-9c174f87944e,0.08,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Sinister Cryologist,EOE,Edge of Eternities,75,normal,common,2,107783,e8fbe740-05ec-4ced-bb9d-3084c8c2b631,0.04,false,false,near_mint,en,EUR,2025-08-01T19:16:32.510Z
 Siren Lookout,XLN,Ixalan,78,normal,common,1,3934,0000cd57-91fe-411f-b798-646e965eec37,0.11,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Skittering Surveyor,MOM,March of the Machine,264,normal,common,1,81404,8bae9f1d-e96d-444c-a0fd-5608243ee6c8,0.05,false,false,near_mint,en,EUR,2026-07-27T10:14:10.726Z
 Skulduggery,OTJ,Outlaws of Thunder Junction,107,normal,common,1,93030,03709166-164a-4075-ad0d-ea3b516ab771,0.02,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Skybox Ferry,DFT,Aetherdrift,243,normal,common,1,103542,75d9ef34-ae95-4465-a30c-372e231bd733,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Skyshroud Claim,EOC,Edge of Eternities Commander,107,normal,common,1,107082,860c0808-3ec1-4182-bf83-783720a02780,1.09,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
@@ -1037,7 +1057,7 @@ Soul of Migration,MH2,Modern Horizons 2,33,normal,common,1,59524,4541217f-5e86-4
 Soul-Shackled Zombie,FDN,Foundations,70,normal,common,1,101609,deea5690-6eb2-4353-b917-cbbf840e4e71,0.1,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Sower of Chaos,FDN,Foundations,95,normal,common,1,101556,7ff50606-491c-4946-8d03-719b01cfad77,0.06,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Spectacle Summit,SOS,Secrets of Strixhaven,262,normal,common,1,112055,a0a66f7b-eab4-45da-8895-c2c2c7eb05f8,0.15,false,false,near_mint,es,EUR,2026-04-19T19:45:43.808Z
-Spectacle Summit,SOS,Secrets of Strixhaven,262,normal,common,1,112055,a0a66f7b-eab4-45da-8895-c2c2c7eb05f8,0.06,false,false,near_mint,en,EUR,2026-05-08T10:13:36.510Z
+Spectacle Summit,SOS,Secrets of Strixhaven,262,normal,common,2,112055,a0a66f7b-eab4-45da-8895-c2c2c7eb05f8,0.06,false,false,near_mint,en,EUR,2026-05-08T10:13:36.510Z
 Spectacular Tactics,SPM,Marvel's Spider-Man,15,normal,common,2,107648,836b4246-f1f2-4495-8664-650dda70ed4f,0.09,false,false,near_mint,en,EUR,2025-09-30T23:51:40.191Z
 Specter of the Fens,STX,Strixhaven: School of Mages,87,normal,common,2,58145,73e3cfbc-7177-4bbc-89c4-560c9c2f97db,0.02,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Spectral Interference,DFT,Aetherdrift,63,normal,common,1,103556,860cb8af-a5f6-47e7-a34b-7b9f11ddc8c6,0.06,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
@@ -1066,7 +1086,7 @@ Squad Rallier,FDN,Foundations,24,normal,common,2,101534,65e1ee86-6f08-4aa0-bf63-
 Squire's Lightblade,EOE,Edge of Eternities,36,normal,common,2,107699,2a0accba-85d4-4aa4-a70c-80fcce48c261,0.1,false,false,near_mint,en,EUR,2025-08-01T19:16:32.510Z
 Squirrelanoids,TMT,Teenage Mutant Ninja Turtles,81,normal,common,1,111597,be08d2b0-375b-434f-9e6d-060809e0ed34,0.03,false,false,near_mint,en,EUR,2026-03-06T23:49:55.828Z
 Stab,FDN,Foundations,71,foil,common,1,101538,6859a5ba-1c1c-4631-bba8-f9900b827178,0.07,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
-Stab,FDN,Foundations,71,normal,common,2,101538,6859a5ba-1c1c-4631-bba8-f9900b827178,0.08,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Stab,FDN,Foundations,71,normal,common,3,101538,6859a5ba-1c1c-4631-bba8-f9900b827178,0.09,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Stadium Tidalmage,SOS,Secrets of Strixhaven,232,normal,common,1,112658,a689289e-7141-4950-8a87-82e9bd6846fe,0.22,false,false,near_mint,es,EUR,2026-04-19T19:45:43.816Z
 Stagecoach Security,OTJ,Outlaws of Thunder Junction,30,normal,common,1,93086,21301998-b3e6-4f3d-89f4-5e17aeb79a1e,0.05,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Stall Out,DFT,Aetherdrift,66,normal,common,1,103500,4ea0e0d3-833f-4353-b648-57b0b657cc1c,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
@@ -1092,8 +1112,9 @@ Stratosoarer,ECL,Lorwyn Eclipsed,72,normal,common,2,110746,4f607889-6f3f-4511-89
 Streaking Oilgorger,DFT,Aetherdrift,107,normal,common,2,103097,6ff120a2-e2bb-42a2-bcb7-a48eb7a6d9b2,0.1,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Strife Scholar // Awaken the Ages,SOS,Secrets of Strixhaven,131,normal,common,1,112644,8de79312-2046-425e-9919-49afe19be81b,0.15,false,false,near_mint,es,EUR,2026-04-19T19:45:43.738Z
 Strife Scholar // Awaken the Ages,SOS,Secrets of Strixhaven,131,normal,common,3,112644,8de79312-2046-425e-9919-49afe19be81b,0.04,false,false,near_mint,en,EUR,2026-05-08T10:13:36.466Z
-Strix Lookout,FDN,Foundations,52,normal,common,2,101627,fbd2422e-8e84-4c39-af29-3b4d38baee63,0.07,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Strix Lookout,FDN,Foundations,52,normal,common,3,101627,fbd2422e-8e84-4c39-af29-3b4d38baee63,0.08,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Studious First-Year // Rampant Growth,SOS,Secrets of Strixhaven,162,normal,common,1,111693,24f888dd-785c-4089-a89c-03f9080130ed,0.13,false,false,near_mint,es,EUR,2026-04-19T19:45:43.784Z
+Study Hall,C21,Commander 2021,80,normal,common,1,58649,a3de9859-98b6-4efe-847a-43bac5b1ef9f,0.27,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Subway Train,SPM,Marvel's Spider-Man,178,normal,common,2,108552,96f869f7-db88-4580-82b7-8749a55e525c,0.02,false,false,near_mint,en,EUR,2025-09-30T23:51:40.191Z
 Sultai Devotee,TDM,Tarkir: Dragonstorm,160,normal,common,1,104358,c32487e9-f3ac-472e-b6ea-81bd9254770c,0.05,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Summit Intimidator,TDM,Tarkir: Dragonstorm,125,normal,common,1,104373,e3cba0b1-7c22-4e51-b9cf-5bf01e67a222,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
@@ -1148,6 +1169,7 @@ Temur Tawnyback,TDM,Tarkir: Dragonstorm,229,normal,common,1,104566,3cdb383f-bc04
 Tend the Sprigs,ECL,Lorwyn Eclipsed,197,normal,common,2,110324,388f6d9d-bb9a-4a3d-93c5-701db194863c,0.05,false,false,near_mint,en,EUR,2026-01-25T20:47:46.770Z
 Tenderize,TMT,Teenage Mutant Ninja Turtles,133,normal,common,3,111511,bc19807b-09e8-4923-abc3-d4bbe8cde5fc,0.08,false,false,near_mint,en,EUR,2026-03-06T23:49:55.740Z
 Terramorphic Expanse,BLC,Bloomburrow Commander,345,normal,common,1,96204,21bb96d8-483c-4fde-97ea-08be9570c289,0.12,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
+Terramorphic Expanse,CMA,Commander Anthology,278,normal,common,1,5008,f8651259-cc23-4089-96f7-d706ab87c8bb,0.24,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Terramorphic Expanse,EOC,Edge of Eternities Commander,62,normal,common,1,107056,7102269a-e0d1-42a0-aa9d-fdd53b5aaebe,0.19,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Terramorphic Expanse,SOS,Secrets of Strixhaven,265,normal,common,1,112047,9a4c5629-fadd-42b9-850f-9f8586a2ca50,0.05,false,false,near_mint,en,EUR,2026-05-08T10:13:36.503Z
 Territorial Hammerskull,PLST,The List,XLN-41,normal,common,1,49096,507fb744-c6dc-4ff2-a329-872bd8c4d39c,0.1,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
@@ -1187,6 +1209,7 @@ Timid Shieldbearer,ECL,Lorwyn Eclipsed,39,normal,common,1,110699,1c672d38-a1a6-4
 Titan's Grave,SOS,Secrets of Strixhaven,266,normal,common,1,112068,a9ab41c8-3ee2-4676-9b8b-20c34d9f5f21,0.06,false,false,near_mint,en,EUR,2026-05-08T10:13:36.422Z
 Titanic Growth,PLST,The List,M19-205,normal,common,1,47992,b0d513a9-c292-46a3-be06-d29d7090dc92,0.05,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Tolarian Terror,FDN,Foundations,167,normal,common,1,100270,2569d4f3-55ed-4f99-9592-34c7df0aab72,0.22,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Tolarian Terror,FDN,Foundations,167,normal,common,1,100270,2569d4f3-55ed-4f99-9592-34c7df0aab72,0.24,false,false,near_mint,en,EUR,2026-07-26T15:29:12.974Z
 Tome Blast,SOS,Secrets of Strixhaven,135,normal,common,1,112630,72a3b17d-1e00-48e9-8402-c81bacd595a7,0.06,false,false,near_mint,en,EUR,2026-05-08T10:13:36.519Z
 Topiary Panther,MKM,Murders at Karlov Manor,179,normal,common,1,90623,03d0365e-6dee-4236-a997-6761e3cde90d,0.06,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Town Greeter,FIN,Final Fantasy,209,normal,common,1,105610,49cd4efa-4df4-4257-9a42-60330f7781e2,0.02,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
@@ -1197,6 +1220,7 @@ Tranquil Cove,FDN,Foundations,270,normal,common,1,100719,7c9cabca-5bcc-4b97-b2ac
 Tranquil Cove,M21,Core Set 2021,258,normal,common,6,50710,0fee9b4b-1510-4b78-bdde-2e0bb319ee33,0.07,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Treasure,TOTJ,Outlaws of Thunder Junction Tokens,18,normal,common,1,93713,7ec6f053-96f7-4e57-b2eb-4e7699a40a4f,0.07,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Treasure,TSPM,Marvel's Spider-Man Tokens,7,normal,common,1,108663,d52efeb3-661d-45e9-97c3-af167f889684,,false,false,near_mint,en,EUR,2025-09-30T23:51:40.191Z
+Treasure Cruise,C16,Commander 2016,101,normal,common,1,7253,605804a5-e525-4c70-bcc5-8e4bee784b93,0.16,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Treeguard Duo,BLB,Bloomburrow,200,normal,common,3,96077,89c8456e-c971-42b7-abf3-ff5ae1320abe,0.07,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Treetop Snarespinner,FDN,Foundations,114,normal,common,1,101562,88e68fa3-159d-49a6-8ac6-afc9bd6f1718,0.11,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Tributary Vaulter,ECL,Lorwyn Eclipsed,40,normal,common,2,110802,a1db2c83-41d1-4cc6-b9a3-fed504b01127,0.04,false,false,near_mint,en,EUR,2026-01-25T20:47:46.773Z
@@ -1236,7 +1260,7 @@ Utrom Scientists,TMT,Teenage Mutant Ninja Turtles,56,normal,common,1,111478,6da8
 Vampire Soulcaller,FDN,Foundations,75,foil,common,2,101495,2d076293-3b45-4878-8f67-978927cc1f68,0.05,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Vampire Soulcaller,FDN,Foundations,75,normal,common,1,101495,2d076293-3b45-4878-8f67-978927cc1f68,0.05,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Vampire Spawn,AFR,Adventures in the Forgotten Realms,123,normal,common,3,60396,b8975c72-b2ec-4c5f-86a4-4e1e3bb41c15,0.08,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
-Vanguard Seraph,FDN,Foundations,28,normal,common,2,101503,4329c861-fc16-4a96-9c03-25af6ac2adc8,0.04,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Vanguard Seraph,FDN,Foundations,28,normal,common,3,101503,4329c861-fc16-4a96-9c03-25af6ac2adc8,0.07,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Vanquish the Weak,XLN,Ixalan,127,normal,common,1,3885,e599ed0b-4b3b-4341-b6ac-7fdfdc6799a3,0.03,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Vayne's Treachery,FIN,Final Fantasy,124,normal,common,1,106569,6de6d23b-7d42-41c1-be1c-010fe43ee586,0.07,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
 "Vector, Imperial Capital",FIN,Final Fantasy,291,normal,common,1,106512,10e5648e-4884-41e3-95f8-c76f6bca01e2,0.09,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
@@ -1261,7 +1285,7 @@ Wander Off,SOS,Secrets of Strixhaven,104,normal,common,2,112597,3d409512-50b9-4a
 Wanderwine Distracter,ECL,Lorwyn Eclipsed,82,normal,common,1,110624,cbf593a7-d4ae-4771-926a-3c1b2c8c901a,0.13,false,false,near_mint,en,EUR,2026-01-25T20:47:46.698Z
 Wanted Griffin,OTJ,Outlaws of Thunder Junction,38,normal,common,1,93187,624a176b-fe24-4441-8877-464cf172ccff,0.02,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Warren Elder,BLB,Bloomburrow,37,normal,common,3,96030,4bf20069-5a20-4f95-976b-6af2b69f3ad0,0.07,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
-Wary Thespian,FDN,Foundations,235,normal,common,3,101574,a3d62d04-0974-4cb5-9a35-5e996c6456e2,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Wary Thespian,FDN,Foundations,235,normal,common,4,101574,a3d62d04-0974-4cb5-9a35-5e996c6456e2,0.03,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Wastes,EOC,Edge of Eternities Commander,191,normal,common,1,107141,baf8f4f2-9f25-4cd2-8d78-1041e134aeac,0.23,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Wastes,FIN,Final Fantasy,309,normal,common,1,105711,c61feafd-ef09-437c-a12c-fd7d6cb8c15a,0.08,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
 Watcher of the Wayside,TDM,Tarkir: Dragonstorm,249,foil,common,1,104262,2dcafdac-a293-4adc-a540-3b3f469cf6f3,0.05,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
@@ -1287,7 +1311,7 @@ Wind-Scarred Crag,TDM,Tarkir: Dragonstorm,271,normal,common,1,104286,4912e4d0-b1
 "Windurst, Federation Center",FIN,Final Fantasy,292,normal,common,1,106649,c74024bd-b383-468d-9cf5-d112a29f6457,0.09,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
 Wingspan Stride,TDM,Tarkir: Dragonstorm,66,normal,common,1,104541,339a0e24-c332-4558-bb60-f5504ddde88c,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Witch's Web,VOW,Innistrad: Crimson Vow,227,normal,common,3,64088,0d021207-76be-4bc9-bb71-df991a04d8d8,0.06,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
-Witness Protection,FDN,Foundations,168,normal,common,2,101621,f231e981-0069-43ce-ac1c-c85ced613e93,0.12,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Witness Protection,FDN,Foundations,168,normal,common,3,101621,f231e981-0069-43ce-ac1c-c85ced613e93,0.11,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Witness Protection,SNC,Streets of New Capenna,66,normal,common,1,67923,a2be6f2c-8ad0-402d-a7ca-9fe817e83b72,0.52,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Wizard,TFIN,Final Fantasy Tokens,14,normal,common,1,105559,187fe54c-7d0c-4225-9d46-3affbead897d,0.43,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
 World Map,FIN,Final Fantasy,270,normal,common,1,106572,70d9ab99-ec8a-402e-ba1d-ffa6c4c84a3f,0.07,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z

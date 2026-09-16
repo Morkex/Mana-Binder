@@ -1,6 +1,7 @@
 Name,Set code,Set name,Collector number,Foil,Rarity,Quantity,ManaBox ID,Scryfall ID,Purchase price,Misprint,Altered,Condition,Language,Purchase price currency,Added
 Aang's Iceberg,TLA,Avatar: The Last Airbender,5,normal,rare,1,108123,720fbd87-b1c1-4b3b-97a1-46b943b115e3,0.02,false,false,near_mint,en,EUR,2025-11-26T15:34:18.488Z
 "Aang, at the Crossroads // Aang, Destined Savior",TLA,Avatar: The Last Airbender,203,normal,rare,1,109588,fea89ca0-8070-4f28-9851-994314f9d248,0.38,false,false,near_mint,en,EUR,2025-11-26T15:34:18.488Z
+Abstract Performance,SOC,Secrets of Strixhaven Commander,17,normal,rare,1,111876,2795c812-0850-4405-b968-b624deaccd55,0.28,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Abyssal Harvester,FDN,Foundations,54,foil,rare,1,101342,f2e0f538-5825-47e9-883c-3ec6fd5b25ea,1.51,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Adaptive Automaton,FDN,Foundations,723,foil,rare,1,101259,e35e614c-51a9-4d5c-b7fa-1a0a87108785,1.32,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Adarkar Wastes,BLC,Bloomburrow Commander,291,normal,rare,1,96474,d501527c-1bf5-4b59-9bff-e4562181a096,0.4,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
@@ -20,6 +21,7 @@ Antiquities on the Loose,SOS,Secrets of Strixhaven,7,normal,rare,1,112291,68ee92
 Arcanis the Omnipotent,C17,Commander 2017,80,normal,rare,1,4375,e7a7941b-68bf-48b1-a5ed-2013068b486c,0.52,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Archdruid's Charm,MKM,Murders at Karlov Manor,151,normal,rare,1,90906,5caae5ae-845f-42c2-b1ae-956df2739433,4.76,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Archmage Emeritus,STX,Strixhaven: School of Mages,37,normal,rare,1,58151,761df6cd-0928-4167-8902-58fdb50181a0,3.05,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Archmage Emeritus,STX,Strixhaven: School of Mages,37,normal,rare,1,58151,761df6cd-0928-4167-8902-58fdb50181a0,1.46,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Archmage of Runes,FDN,Foundations,30,normal,rare,1,100339,334b5018-2da9-49f1-9d09-83d312ecfb02,1.11,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Ark of Hunger,SOS,Secrets of Strixhaven,173,normal,rare,1,112311,79d01c19-162b-4a12-9e27-18366d95eaa0,0.23,false,false,near_mint,es,EUR,2026-04-19T19:45:43.742Z
 Ark of Hunger,SOS,Secrets of Strixhaven,173,normal,rare,1,112311,79d01c19-162b-4a12-9e27-18366d95eaa0,0.23,false,false,near_mint,en,EUR,2026-04-19T19:45:43.824Z
@@ -40,6 +42,7 @@ Battlefield Forge,BLC,Bloomburrow Commander,293,normal,rare,1,96208,24323a73-8c9
 Bident of Thassa,BLC,Bloomburrow Commander,162,normal,rare,1,96314,60a9018a-24a9-4c25-89ca-4ac52a60fbf1,0.44,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Bilbo's Ring,LTR,The Lord of the Rings: Tales of Middle-earth,298,normal,rare,1,83297,91dbeac4-1c39-4a4f-84e7-1b71f7468c8f,4.82,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Blade Splicer,BLC,Bloomburrow Commander,136,normal,rare,1,96378,8ea1a510-ec87-4c93-bcf2-0c91738b008f,0.21,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
+Blasphemous Act,ECC,Lorwyn Eclipsed Commander,89,normal,rare,1,110661,f349a283-a3ee-468b-92c5-d74f53f4d621,1.56,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Blasphemous Act,EOC,Edge of Eternities Commander,86,normal,rare,1,107215,fbeeb7d0-cda8-414b-82d3-a83f1883bdd2,2.38,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Blasphemous Edict,FDN,Foundations,57,normal,rare,1,100168,11040ecd-3153-4029-b42b-1441bc51ec34,6.86,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Bloodghast,DFT,Aetherdrift,337,normal,rare,1,103010,4560bd1f-eb63-45bc-a8c7-b5de200facc9,1.12,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
@@ -47,17 +50,22 @@ Bloodline Bidding,ECL,Lorwyn Eclipsed,91,normal,rare,1,110553,877d9b75-ad2f-45a6
 Boon-Bringer Valkyrie,MOM,March of the Machine,9,normal,rare,1,81141,84e1cc7d-e645-4b0e-b117-63f93528ed12,0.34,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Boss's Chauffeur,BLC,Bloomburrow Commander,137,normal,rare,1,96373,8936a2b6-4b00-4d74-bebb-a76d6f6b09b1,0.22,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 "Braids, Arisen Nightmare",EOC,Edge of Eternities Commander,82,normal,rare,1,107212,f96223d0-04c4-40c2-87a9-0c6bc74adddb,2.53,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
+Brass's Bounty,FDN,Foundations,190,normal,rare,1,100610,65fe7127-b0ec-400f-97f1-6e17ab8e319d,0.26,false,false,near_mint,en,EUR,2026-07-26T15:29:12.980Z
 Brigid's Command,ECL,Lorwyn Eclipsed,208,normal,rare,1,110843,cf034777-3da7-4d5c-9213-5e9d235c315a,0.02,false,false,near_mint,en,EUR,2026-01-25T20:47:46.763Z
+"Brudiclad, Telchor Engineer",BRC,The Brothers' War Commander,122,normal,rare,1,75717,b2068926-0a67-4cdf-8c80-103ec32564e9,0.19,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Calamity Bearer,KHM,Kaldheim,125,normal,rare,1,57010,a15edad1-ff68-4f20-95f6-99fe549bea98,0.12,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Calamity of Cinders,BLC,Bloomburrow Commander,23,normal,rare,1,96392,97c72d4b-a5d4-4f68-bbcd-b7ed0326fc1c,0.27,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Canyon Slough,EOC,Edge of Eternities Commander,152,normal,rare,1,107029,5d89a57c-d982-4d1d-beca-14f156b8c3e7,0.16,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 "Caradora, Heart of Alacria",DFT,Aetherdrift,195,normal,rare,1,102918,1256d22d-a2a9-41fb-b669-0661ba230bc7,0.12,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Cascade Bluffs,BLC,Bloomburrow Commander,297,normal,rare,1,96350,7acefadf-c856-455d-8647-7fa24c24b79b,0.69,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
+Cascade Bluffs,EOC,Edge of Eternities Commander,153,normal,rare,1,107260,3aa15173-06c7-4d25-97c8-523d23eaf973,0.63,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Case of the Uneaten Feast,MKM,Murders at Karlov Manor,10,normal,rare,1,91118,ac63941b-3f78-4bd3-8b05-ca12aaaa006c,0.52,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Castle Ardenvale,BLC,Bloomburrow Commander,298,normal,rare,1,96470,d2b011b0-3e44-4796-bb0a-615e259184db,0.19,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Celestial Armor,FDN,Foundations,5,foil,rare,1,100742,809ee8ad-1573-49e5-9e84-b7cdd29efcae,0.37,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Centaur Vinecrasher,EOC,Edge of Eternities Commander,94,normal,rare,1,107167,cf8712ba-574b-4e53-9c7e-0a1465116320,0.16,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
+Chain Reaction,SCD,Starter Commander Decks,126,normal,rare,1,77227,0609ddd2-1e98-4fe3-855e-c0ba1c365369,0.25,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Champions of the Shoal,ECL,Lorwyn Eclipsed,46,normal,rare,1,110853,e1acdd9c-4a6d-4373-950c-f5539b54679f,0.02,false,false,near_mint,en,EUR,2026-01-25T20:47:46.688Z
+Chaos Warp,SCD,Starter Commander Decks,127,normal,rare,1,77231,07d3dbce-ef28-4c03-9b7b-92f1caaf1f01,0.5,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Charming Prince,FDN,Foundations,568,normal,rare,1,100964,aa7b47e1-7e32-4f2f-aecf-bac7ca197081,1.52,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Cheering Crowd,SPM,Marvel's Spider-Man,126,normal,rare,1,108524,5fbce72f-e9a1-4d9f-b9b3-24dbafeef841,0.02,false,false,near_mint,en,EUR,2025-09-30T23:51:40.191Z
 "Choco, Seeker of Paradise",FIN,Final Fantasy,215,normal,rare,2,106273,409c305a-52dc-4538-8e72-efcd568eaf49,0.02,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
@@ -66,6 +74,7 @@ Choreographed Sparks,SOS,Secrets of Strixhaven,111,normal,rare,1,112564,0cda4235
 Cinder Glade,EOC,Edge of Eternities Commander,154,normal,rare,1,107062,7865ae5f-cfd9-4913-bcf5-aadbd6824e65,0.16,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Cleaving Reaper,KHM,Kaldheim,376,normal,rare,1,57053,b59dadef-74e5-47c7-a3e0-51075ddb82b1,0.15,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Clifftop Retreat,BLC,Bloomburrow Commander,300,normal,rare,1,96265,42ca7627-965e-4594-a871-d8d137d6b9a9,0.43,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
+Coastal Peak,SOC,Secrets of Strixhaven Commander,52,normal,rare,1,112065,a8af6ded-de96-4095-8a5b-9f1c79adea1a,0.5,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Colossification,IKO,Ikoria: Lair of Behemoths,148,normal,rare,1,49929,7b6e6f2a-5015-44c6-aa8d-85188494d1a6,0.46,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Comforting Counsel,SOS,Secrets of Strixhaven,143,normal,rare,1,112612,5223a04f-6b47-4379-80ce-8489c4a91734,0.19,false,false,near_mint,es,EUR,2026-04-19T19:45:43.729Z
 Concealed Courtyard,OTJ,Outlaws of Thunder Junction,268,normal,rare,1,93318,b75df1f0-0513-40e4-a449-454f75de6434,1.55,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
@@ -75,17 +84,24 @@ Consuming Tide,VOW,Innistrad: Crimson Vow,53,normal,rare,1,64225,5865f0f1-28a6-4
 Cori Mountain Monastery,TDM,Tarkir: Dragonstorm,252,normal,rare,1,104810,9312821a-2059-4f44-9b20-c9522b827e38,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Cragplate Baloth,ZNR,Zendikar Rising,359,normal,rare,1,54477,227be7a0-de77-48ae-9a07-91d671985168,0.38,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Crawling Barrens,ZNR,Zendikar Rising,378,normal,rare,1,54772,d9078dbd-65c5-4b02-ac21-c3d2da05b8ec,0.62,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Creative Technique,C21,Commander 2021,49,normal,rare,1,58693,ce4f0474-48dc-4310-a016-0ec21bc29efb,1.18,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Creepy Puppeteer,VOW,Innistrad: Crimson Vow,151,normal,rare,1,64084,0bd17b9f-fd93-47d4-9cc4-cd333d0004f5,0.1,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Cultivator's Caravan,NEC,Neon Dynasty Commander,149,normal,rare,1,67068,c7bddb42-b754-4121-8ff7-e4e50df2eac6,0.16,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
-Curiosity Crafter,BLC,Bloomburrow Commander,165,normal,rare,1,96244,34473117-ede4-492d-bdd1-e89818cfbf5c,1.13,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
+Curiosity Crafter,BLC,Bloomburrow Commander,165,normal,rare,2,96244,34473117-ede4-492d-bdd1-e89818cfbf5c,0.91,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Cursecloth Wrappings,DFT,Aetherdrift,81,normal,rare,2,103287,d5803b32-4a81-46c2-9b10-3198a709611d,0.34,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Cursed Mirror,MH3,Modern Horizons 3,279,normal,rare,1,94486,6768daa5-41b0-49e1-b71a-63f733b4dc3d,0.64,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Cyclone Summoner,KHM,Kaldheim,343,normal,rare,1,56815,3420845c-bcb3-4969-9c21-bf4732babfe2,0.52,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Dance with Calamity,MOC,March of the Machine Commander,29,normal,rare,1,81412,9638d43d-6864-49ac-af99-6de02bc64259,1.34,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
+Dark Deed,PW26,Wizards Play Network 2026,12,normal,rare,1,113392,f1881823-524b-4cac-bf12-6053a1b6e3ab,2.06,false,false,near_mint,en,EUR,2026-07-27T10:14:10.724Z
 Day of Judgment,FDN,Foundations,140,normal,rare,1,95585,96e84bdc-8a9a-4c58-ba8b-9f052fd60069,0.72,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Demonic Junker,DFT,Aetherdrift,83,normal,rare,1,103024,4aad569e-4acb-4416-9d4f-64e6991de3ed,0.42,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Demonic Rising,AVR,Avacyn Restored,94,normal,rare,1,18184,a2136a82-b535-47f6-9eee-5b7585ac5cf1,0.3,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Desecration Demon,DDR,Duel Decks: Nissa vs. Ob Nixilis,44,normal,rare,1,7819,d0d6fabf-ffef-4272-8285-c671f6d777f0,0.32,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Determined Iteration,NCC,New Capenna Commander,45,normal,rare,1,67811,6c3d8fc5-bef5-4625-8832-43afa997dbe3,3.57,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Devilish Valet,BLC,Bloomburrow Commander,195,normal,rare,1,96393,991eca84-5562-40e1-bc63-12dc469779b6,0.17,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Dictate of Kruphix,FDN,Foundations,587,normal,rare,1,101028,b5e4087b-e692-4eb2-bb59-ff2a001d6dd4,0.96,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Dig Through Time,FIC,Final Fantasy Commander,263,normal,rare,1,105990,766b2e52-6ba1-4222-a9f4-01a2bf3e9443,0.22,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
+Dirgur Focusmage // Braingeyser,SOC,Secrets of Strixhaven Commander,18,normal,rare,1,111988,7bdabeba-0cfb-4953-b725-50a48164a044,0.49,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Doors of Durin,LTR,The Lord of the Rings: Tales of Middle-earth,199,normal,rare,1,83285,8ebd8813-4aaf-48bf-9243-3ec4099b8372,0.38,false,false,near_mint,en,EUR,2026-04-19T14:28:02.866Z
 Drag the Canal,MKM,Murders at Karlov Manor,199,normal,rare,1,90860,508d7096-2be3-4d4b-a55c-d4dbd3c9019c,0.17,false,false,near_mint,en,EUR,2025-04-20T23:29:07.829Z
 Dragonsguard Elite,STX,Strixhaven: School of Mages,127,normal,rare,1,58128,658ec634-3eb2-4967-b938-d20d31ab77e3,0.17,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
@@ -99,6 +115,7 @@ Drogskol Reaver,FDN,Foundations,655,normal,rare,1,101086,c0a4450c-8dfd-4d05-adb9
 Dusk // Dawn,BLC,Bloomburrow Commander,138,normal,rare,1,96145,00bbcc83-7307-46cc-b164-e1ff502d18a3,0.19,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Dusk Legion Duelist,MOM,March of the Machine,11,normal,rare,1,81113,7305a8d3-5403-4483-92af-863dc91c6084,0.57,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 "Dyadrine, Synthesis Amalgam",EOE,Edge of Eternities,216,normal,rare,1,107498,994ca692-7138-4dcb-bf46-5da530f86036,0.29,false,false,near_mint,en,EUR,2025-08-01T19:16:32.510Z
+"Echo, Perceptive Prodigy",PW26,Wizards Play Network 2026,11,normal,rare,1,113378,92a26fea-d0e5-4e50-93c8-e1785be40f95,1.34,false,false,near_mint,en,EUR,2026-07-26T18:55:43.811Z
 Echoing Assault,BLC,Bloomburrow Commander,24,normal,rare,1,96240,3213bfee-c0a0-49a2-9080-cdaa09b414c5,0.83,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Echoing Deeps,EOS,Edge of Eternities: Stellar Sights,13,normal,rare,1,107527,b8a61e4e-e51f-4175-be3a-1f71fefc966f,0.55,false,false,near_mint,en,EUR,2025-08-01T19:16:32.510Z
 Eldrazi Temple,EOS,Edge of Eternities: Stellar Sights,14,normal,rare,1,106938,010abd40-3f9c-44bc-8570-d539750c3cd7,2.82,false,false,near_mint,en,EUR,2025-08-02T12:05:52.876Z
@@ -114,16 +131,20 @@ Eumidian Wastewaker,EOC,Edge of Eternities Commander,8,normal,rare,1,107005,3ee1
 Evendo Brushrazer,EOC,Edge of Eternities Commander,10,normal,rare,1,107086,8b9001a4-953c-4a32-b51a-c6bec7e74f9e,0.86,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Exhibition Tidecaller,SOS,Secrets of Strixhaven,48,normal,rare,1,111730,a58c364e-d0c5-41b9-8c8b-2e5a99468cc7,0.02,false,false,near_mint,en,EUR,2026-05-08T10:13:36.498Z
 Exotic Orchard,BLC,Bloomburrow Commander,131,normal,rare,1,96507,e6d8d98d-29b2-4ca2-bbda-4db2e8f6ae0b,0.2,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
+Exotic Orchard,OTC,Outlaws of Thunder Junction Commander,293,normal,rare,1,93581,3da63d3f-3752-48cd-8ea4-0ce08b1b8c21,0.24,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Exploration Broodship,EOC,Edge of Eternities Commander,14,normal,rare,1,107036,61596da3-2a0e-47d9-b707-8db4cce2479d,2.3,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Exquisite Blood,AVR,Avacyn Restored,102,normal,rare,1,18176,4cd54279-57f5-4cd9-b524-4f094bd2fc36,26.64,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Extraction Specialist,SNC,Streets of New Capenna,12,normal,rare,1,67957,b404d6c7-0b65-4c6a-b141-9dffbeb120db,0.52,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 "Ezrim, Agency Chief",MKM,Murders at Karlov Manor,202,normal,rare,1,91059,9554d5f2-7a33-4734-8cf3-dfae2ccc3596,0.18,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Fabled Passage,EOC,Edge of Eternities Commander,60,normal,rare,1,107052,6a21ecc8-f6fd-4670-91d8-94b9ce94c2fe,3.63,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
+Fabled Passage,TMC,Teenage Mutant Ninja Turtles Eternal,67,normal,rare,1,111280,7c787c6b-b6c7-47a0-8f8d-761629f5568e,1.17,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
+Faerie Mastermind,PMOM,March of the Machine Promos,58p,normal,rare,1,82410,f32bb990-3bf2-4b9e-baa7-40dd4e921112,11.71,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 "Fandaniel, Telophoroi Ascian",FIC,Final Fantasy Commander,146,normal,rare,1,106262,fede6d1c-461e-456f-8cdb-7acac69d30ae,2.07,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
 Fecund Greenshell,BLB,Bloomburrow,171,normal,rare,1,96071,80b3e815-0e2e-4325-b1d5-5531b7b92da6,0.36,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Felidar Retreat,FDN,Foundations,574,normal,rare,1,100801,89e3cc09-5057-4c05-88fc-d6cda809fc74,1.25,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Fell the Mighty,OTP,Breaking News,1,normal,rare,1,93439,fbd897e0-0f6b-4a35-9f33-a16d85ddfad8,0.23,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Ferrous Lake,BLC,Bloomburrow Commander,303,normal,rare,1,96514,eb7409f7-8fbd-49f4-8226-9013fef17ab3,0.35,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
+Ferrous Lake,TDC,Tarkir: Dragonstorm Commander,361,normal,rare,1,104583,4105785e-cbaa-4017-ae93-ba5ac8f2fd4c,0.43,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Festering Thicket,EOC,Edge of Eternities Commander,21,normal,rare,1,107172,d312f4ca-909a-47df-91dc-dfb63838b5f5,1.07,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Fin Fang Foom,MSH,Marvel Super Heroes,129,normal,rare,1,113372,7777fac1-7bf5-4454-960d-26ec3183e392,0.11,false,false,near_mint,es,EUR,2026-06-20T00:03:25.263Z
 "Finneas, Ace Archer",BLB,Bloomburrow,212,normal,rare,1,95741,0dee197d-c313-4364-b52c-f83d5f579bc3,0.27,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
@@ -138,7 +159,9 @@ Freestrider Lookout,OTJ,Outlaws of Thunder Junction,163,normal,rare,1,93111,3237
 Frenzied Baloth,EOE,Edge of Eternities,183,foil,rare,1,107158,c72d85e9-a0bc-4f73-8d73-c58843577f4e,2.94,false,false,near_mint,en,EUR,2025-08-02T12:05:52.876Z
 Friendly Neighborhood,SPM,Marvel's Spider-Man,8,normal,rare,1,108619,17a18e2f-221f-4fc2-8dab-25bf12fb8756,0.02,false,false,near_mint,en,EUR,2025-09-30T23:51:40.191Z
 "Frodo, Determined Hero",LTR,The Lord of the Rings: Tales of Middle-earth,289,normal,rare,1,83248,83d1b37c-a8c6-4690-8701-3395397711e7,0.78,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Frostboil Snarl,LCC,The Lost Caverns of Ixalan Commander,332,normal,rare,1,89054,faa52a92-18ce-46f9-b360-3477b6e78234,0.25,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Fumigate,PKLD,Kaladesh Promos,15p,normal,rare,1,50450,085e4b57-495b-41bc-a49d-fa5f00553555,0.57,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Furygale Flocking,SOC,Secrets of Strixhaven Commander,32,normal,rare,1,112067,a967af7a-03ed-4858-9c26-66f2cb706b02,0.29,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 "Galadriel, Gift-Giver",LTR,The Lord of the Rings: Tales of Middle-earth,296,normal,rare,1,83239,8229264e-af6c-4f1f-b86a-257889ace9ce,2.55,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 "Gandalf, White Rider",LTR,The Lord of the Rings: Tales of Middle-earth,290,normal,rare,1,83412,b422ce26-06fb-4748-9c01-32c4be914a77,1.52,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Gaze of Granite,EOC,Edge of Eternities Commander,116,normal,rare,1,107100,97cf4cd8-9cb5-482e-92ca-da657b410e48,0.12,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
@@ -159,11 +182,13 @@ Grave Researcher // Reanimate,SOS,Secrets of Strixhaven,85,normal,rare,1,111721,
 Great Arashin City,TDM,Tarkir: Dragonstorm,257,foil,rare,1,105033,ecba23b6-9f3a-431e-bc22-f1fb04d27b68,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Great Hall of the Biblioplex,SOS,Secrets of Strixhaven,257,normal,rare,1,111794,42d92674-2664-411c-b9c5-b04da7c845f4,1.02,false,false,near_mint,es,EUR,2026-04-19T19:45:43.807Z
 "Halana and Alena, Partners",VOW,Innistrad: Crimson Vow,239,normal,rare,1,64236,608fa232-f5fe-4c58-9efe-fb780f454b19,1.06,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Hall of Oracles,STX,Strixhaven: School of Mages,267,normal,rare,1,58152,7642dddd-4461-46dd-b396-9e0a89f7232e,0.41,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Hallowed Fountain,ECL,Lorwyn Eclipsed,347,normal,rare,1,108944,19cba6be-7291-4788-9241-87dad3b68363,12.27,false,false,near_mint,en,EUR,2026-01-25T20:47:46.730Z
 Hammer of Purphoros,EOC,Edge of Eternities Commander,88,normal,rare,1,107091,900de725-741b-4b25-8e40-78ed7575a83f,0.33,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Hanged Executioner,BLC,Bloomburrow Commander,139,normal,rare,1,96212,2791a28a-30fa-4f1a-9f05-f3db155b6f06,0.13,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Harbinger of the Tides,DDT,Duel Decks: Merfolk vs. Goblins,7,normal,rare,1,3704,90f648d2-27be-4414-9e0a-5a3e4d5067ce,0.29,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Harmless Offering,EMN,Eldritch Moon,131,normal,rare,1,8203,f8f3cc4f-7943-4025-b332-b40653b13014,0.49,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Harmonic Prodigy,MH2,Modern Horizons 2,352,normal,rare,1,59516,4290d31a-ce74-4a22-8266-9e44d23d506f,4.02,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Harmonized Crescendo,ECL,Lorwyn Eclipsed,54,normal,rare,1,110310,2715e0c0-9913-4bea-9a42-ad1164f6130a,0.58,false,false,near_mint,en,EUR,2026-07-20T10:08:18.048Z
 Hedge Maze,MKM,Murders at Karlov Manor,262,foil,rare,1,90865,5260f8ae-805b-4eae-badf-62de0f768867,15.05,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 "Hellcat, Undying Vigilante",PW26,Wizards Play Network 2026,13,foil,rare,1,113351,72ef7900-4c25-48f8-9651-1d251cb2e6cb,,false,false,near_mint,en,EUR,2026-07-20T10:08:18.021Z
@@ -175,6 +200,8 @@ Howlsquad Heavy,DFT,Aetherdrift,134,normal,rare,1,103651,df582f80-7b9a-4f71-95a9
 Hullbreaker Horror,WOC,Wilds of Eldraine Commander,95,normal,rare,1,85247,0b743cf8-2d90-4fcf-94ad-8d9512dddd9e,1.38,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Immersturm Predator,KHM,Kaldheim,214,normal,rare,1,56749,0d83d2d9-b9d0-47f5-989b-f2c726401ade,0.22,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Ingenious Prodigy,WOE,Wilds of Eldraine,56,normal,rare,1,85734,cf224968-b676-40dd-83c1-a9ee2ceba574,0.45,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Inspired Skypainter // Maestro's Gift,SOC,Secrets of Strixhaven Commander,48,normal,rare,1,111996,7fddd17b-8282-408e-a319-7f0bb437c52e,0.31,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
+Invasion of Innistrad // Deluge of the Dead,INR,Innistrad Remastered,120,normal,rare,1,101861,370412b1-85ec-42a9-90fe-c35a6249e149,0.27,false,false,near_mint,en,EUR,2026-07-27T10:14:10.734Z
 Ionize,OTP,Breaking News,49,normal,rare,1,93277,98c75555-8fe0-4902-a2c7-b807d95b71ab,0.17,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 "Izoni, Center of the Web",MKM,Murders at Karlov Manor,209,normal,rare,1,90963,70ea66cd-587a-4ca9-9ca8-d7d2046bfbed,0.21,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Jacked Rabbit,BLC,Bloomburrow Commander,9,normal,rare,1,96226,2c695df6-6bf2-4e6b-8500-e3116137ca27,2.57,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
@@ -190,6 +217,7 @@ Kitsune's Technique,TMT,Teenage Mutant Ninja Turtles,42,normal,rare,1,110939,9ca
 "Krenko, Mob Boss",FDN,Foundations,204,normal,rare,1,100750,824b2d73-2151-4e5e-9f05-8f63e2bdcaa9,0.6,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 "Lathliss, Dragon Queen",FDN,Foundations,627,normal,rare,1,100410,409acb8f-cf03-4a56-a8c0-e4c97a01ee10,2.13,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Lavaleaper,ECL,Lorwyn Eclipsed,150,normal,rare,1,110367,82902488-d178-4752-bcfb-dd3050654d23,0.02,false,false,near_mint,en,EUR,2026-01-25T20:47:46.762Z
+Leitmotif Composer,SOC,Secrets of Strixhaven Commander,20,normal,rare,1,111871,2511b281-f822-427c-ac5f-d376b64fa6cf,0.22,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Leyline Axe,FDN,Foundations,129,normal,rare,1,101052,b9c03336-a321-4c06-94d1-809f328fabd8,1.56,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Leyline of the Guildpact,MKM,Murders at Karlov Manor,217,normal,rare,1,91170,bf6e59be-f959-4f4a-8c2d-b7c441e88135,4.17,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 "Lilah, Undefeated Slickshot",OTJ,Outlaws of Thunder Junction,217,normal,rare,1,93384,e21f90ea-5934-4757-8515-38ef116afac1,0.16,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
@@ -245,6 +273,7 @@ Phyrexian Rebirth,C19,Commander 2019,68,normal,rare,1,45866,9e222a33-6ec6-4114-9
 Pillage the Bog,OTJ,Outlaws of Thunder Junction,224,normal,rare,1,93436,fa3b415f-7901-4ab4-84fe-60b90d40ac90,0.25,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Pinnacle Starcage,EOE,Edge of Eternities,27,normal,rare,1,107519,b1f40c4c-a955-4d9c-8225-251fa4159124,0.18,false,false,near_mint,en,EUR,2025-08-02T12:05:52.876Z
 Planetary Annihilation,EOC,Edge of Eternities Commander,12,normal,rare,1,107083,8695796f-b6ed-46db-b1b8-07ed0cc5a5e5,0.89,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
+Plargg and Nassari,MAT,March of the Machine: The Aftermath,160,normal,rare,1,82468,160f048a-8813-454d-af84-1e53f33af9f6,1.86,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Pollywog Prodigy,BLC,Bloomburrow Commander,15,normal,rare,1,96388,94a020df-714b-4465-bfa2-ac15f27d8412,10.07,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Postmortem Professor,SOS,Secrets of Strixhaven,93,normal,rare,1,112566,174f5d7e-5d36-4d13-96bf-9b12cd644716,0.28,false,false,near_mint,es,EUR,2026-04-19T19:45:43.779Z
 Postmortem Professor,SOS,Secrets of Strixhaven,93,normal,rare,1,112566,174f5d7e-5d36-4d13-96bf-9b12cd644716,0.28,false,false,near_mint,en,EUR,2026-04-19T19:45:43.827Z
@@ -252,6 +281,8 @@ Predator Ooze,DKA,Dark Ascension,124,normal,rare,1,18413,73c71457-f7c9-4ab4-b89d
 Prehistoric Pet,TMT,Teenage Mutant Ninja Turtles,22,normal,rare,2,110904,148e6acd-a96a-4bea-8cfe-a129cd8d1003,0.02,false,false,near_mint,en,EUR,2026-03-06T23:49:55.747Z
 Primal Might,M21,Core Set 2021,197,normal,rare,1,50726,1cd8cee8-7ea0-4037-8a3b-39334dc064fb,0.27,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Prime Speaker Zegana,FDN,Foundations,664,normal,rare,1,101170,d2f007b0-b578-44f8-be65-cd9e2ac56e09,0.42,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Prismari Command,TDC,Tarkir: Dragonstorm Commander,299,normal,rare,1,104464,15e291f4-068a-441c-8b43-05055199aca4,0.41,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
+Prismari Pianist,SOC,Secrets of Strixhaven Commander,34,normal,rare,1,111994,7e3e5990-ad48-4be2-af8a-4ff77177758d,0.42,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Pull from Tomorrow,BLC,Bloomburrow Commander,172,normal,rare,1,96221,29ba0373-d86a-4015-914c-0182002e8fea,0.18,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Qarsi Revenant,TDM,Tarkir: Dragonstorm,86,normal,rare,1,104323,8c93a0f6-5e50-4dda-9ff6-da741fb839ff,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Quirion Beastcaller,DMU,Dominaria United,175,normal,rare,1,71336,2a501319-59a7-45d4-a6ca-666276095f87,0.21,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
@@ -265,17 +296,25 @@ Ran and Shaw,TLA,Avatar: The Last Airbender,150,normal,rare,1,109448,6436e2d0-98
 Rapid Augmenter,BLC,Bloomburrow Commander,38,normal,rare,1,96456,c4643565-a462-45ce-b5ed-f19b796a64c5,0.26,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Reanimate,OTP,Breaking News,18,normal,rare,1,93184,609c34f9-9f53-4773-a02b-517209024fc2,6.85,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Redcap Gutter-Dweller,WOE,Wilds of Eldraine,351,normal,rare,1,85418,59cb9275-07f2-46b1-a64b-2971390a35de,0.31,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Redoubled Stormsinger,TDC,Tarkir: Dragonstorm Commander,37,normal,rare,1,105071,fcddd8e1-8b8e-43b9-9922-6c3317cc45ae,0.49,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Regal Caracal,J22,Jumpstart 2022,232,normal,rare,1,76488,8511fb74-dd0c-492d-87f6-7d27d39d101a,1.26,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Renegade Bull,SOC,Secrets of Strixhaven Commander,36,normal,rare,1,112069,aa23e922-f44b-4af8-8ce0-bc1bc1e65bad,0.28,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
+Replication Technique,M3C,Modern Horizons 3 Commander,192,normal,rare,1,94950,53db61f7-6411-4c2b-b0fd-2d70f2035798,0.21,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Repurposing Bay,DFT,Aetherdrift,56,normal,rare,1,102905,0cf1ace1-b7f5-4bd9-a494-ee7cb6c1f854,1.22,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Resonating Lute,SOS,Secrets of Strixhaven,221,normal,rare,1,112241,6ef168d6-28f2-4c24-9bfa-82c35663b729,1.38,false,false,near_mint,es,EUR,2026-04-19T19:45:43.829Z
+Restless Spire,PWOE,Wilds of Eldraine Promos,260p,normal,rare,1,86191,7cc9d388-f50a-48d5-81a1-bfaed0315df9,0.49,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Restoration Angel,BLC,Bloomburrow Commander,150,normal,rare,1,96499,e27a8eb2-9a7d-4349-b414-0655d86836b1,0.24,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Riku of Many Paths,OTJ,Outlaws of Thunder Junction,227,normal,rare,1,93088,21b63544-4c31-4f38-9907-0407719a60b1,0.07,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Rimefire Torque,ECL,Lorwyn Eclipsed,65,normal,rare,1,110747,4f8931b2-ff3f-4167-8a40-f33460c2d27e,0.02,false,false,near_mint,en,EUR,2026-01-25T20:47:46.673Z
+"Rionya, Fire Dancer",J25,Foundations Jumpstart,75,normal,rare,1,100385,3c101b5a-30f8-4496-994a-de017cb294b9,3.46,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Rite of Replication,PLST,The List,C14-122,normal,rare,1,97253,006ebdeb-ae82-4de9-8f9e-f76f275ea811,1.39,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
+Rite of Replication,TDC,Tarkir: Dragonstorm Commander,165,normal,rare,1,105065,f8cd4dcc-a731-4dd3-8b8e-88877bd98718,0.23,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 River's Rebuke,FDN,Foundations,595,normal,rare,1,100334,32ae984e-5d1e-4497-9a71-7406f78c09f3,0.76,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Rose Room Treasurer,BLC,Bloomburrow Commander,201,normal,rare,1,96406,a13c1103-91d0-4aef-8ece-e7ceb25ffdfb,0.28,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
+Rousing Refrain,C21,Commander 2021,56,normal,rare,1,58709,dc2a5627-8726-45d6-bb1b-a6172096a28a,1.48,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Rugged Prairie,BLC,Bloomburrow Commander,327,normal,rare,1,96245,3504736d-5f88-40dc-9e3e-6018422eff54,0.35,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Rune-Scarred Demon,FDN,Foundations,184,normal,rare,2,100227,1eae3165-554d-4759-8f18-794e2a7d8464,0.44,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Scorched Geyser,SOC,Secrets of Strixhaven Commander,54,normal,rare,1,111947,5abdcad7-3b7a-43f6-a0ad-3aa99ee55c91,1.15,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Scouring Swarm,EOC,Edge of Eternities Commander,16,normal,rare,1,107090,8fc25982-8668-43c4-93db-84e716e8783d,1.07,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Seachrome Coast,BLC,Bloomburrow Commander,328,normal,rare,1,96372,88ec4d3b-f1f1-489c-b41e-0206e5e59fbd,0.92,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Selfless Spirit,BLC,Bloomburrow Commander,153,normal,rare,1,96390,975a2d50-4230-4f13-b54e-5e0d27c7261a,1.0,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
@@ -287,6 +326,7 @@ Shadow Urchin,ECL,Lorwyn Eclipsed,242,normal,rare,1,110745,4e54c39b-6149-467b-a9
 Sheltered Thicket,EOC,Edge of Eternities Commander,178,normal,rare,1,107127,af373c1c-aeb8-48d9-9cea-dfd6d6c2ee87,0.15,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Shield Broker,BLC,Bloomburrow Commander,174,normal,rare,1,96185,173e4f62-96b0-4ee8-a809-045a29aabae0,0.16,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Shivan Reef,BLC,Bloomburrow Commander,331,normal,rare,1,96297,59d5e76c-4961-4dbf-be38-a18a2c16d33f,0.52,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
+Shivan Reef,TDC,Tarkir: Dragonstorm Commander,393,normal,rare,1,104866,a67ddfae-746f-4952-8064-7d48f9f22981,0.48,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Siege Veteran,BRO,The Brothers' War,25,normal,rare,1,75896,f57e2a32-6e52-4f6e-96ec-55f5b7ba77e0,0.32,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Siege-Gang Commander,BLC,Bloomburrow Commander,202,normal,rare,1,96157,0befe0f5-ff7c-441a-9bb2-cbe919be10ad,0.27,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Simian Simulacrum,BRO,The Brothers' War,352,normal,rare,1,75270,036eee90-b002-4d9a-a72e-56cef7cc8648,0.47,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
@@ -297,6 +337,7 @@ Sledge-Class Seedship,EOE,Edge of Eternities,208,normal,rare,1,107562,dc0cb4b6-c
 Slumbering Trudge,SOS,Secrets of Strixhaven,160,normal,rare,1,112335,3a925370-58ac-4181-9acc-db7b0e0abf17,0.02,false,false,near_mint,en,EUR,2026-05-08T10:13:36.455Z
 Smallpox,SOA,Secrets of Strixhaven Mystical Archive,33,normal,rare,1,111782,0f6f64b9-145c-4ed2-b90c-cbcf021b353d,0.84,false,false,near_mint,en,EUR,2026-05-08T10:13:36.424Z
 Smoldering Marsh,EOC,Edge of Eternities Commander,182,normal,rare,1,107196,ea5c3d9e-13e7-492d-80b8-d6dd42895f33,0.18,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
+Solemn Simulacrum,AFC,Forgotten Realms Commander,216,normal,rare,1,60758,71ec1e1d-8c7b-40e9-b916-440f8acf3ea5,0.43,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Solemn Simulacrum,BLC,Bloomburrow Commander,284,normal,rare,1,96405,a0629730-66d4-49bd-af16-25bb949b33fc,0.24,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Solemn Simulacrum,FDN,Foundations,257,normal,rare,1,100514,5383f45e-3da2-40fb-beee-801448bbb60f,0.3,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Spectacular Pileup,DFT,Aetherdrift,29,normal,rare,1,103591,a24a6309-0e69-45f0-a9ff-44d4997e7e4d,0.32,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
@@ -315,12 +356,15 @@ Stormcarved Coast,SOS,Secrets of Strixhaven,263,normal,rare,1,111738,bd3ae4fa-4c
 Strength of Will,SPM,Marvel's Spider-Man,118,normal,rare,1,108529,68f985c7-7765-46c3-ad31-edae3abb9fbf,0.3,false,false,near_mint,en,EUR,2025-09-30T23:51:40.191Z
 Stromkirk Noble,FDN,Foundations,632,normal,rare,1,100164,0f306c7e-cacc-4c26-a3f1-fad4f3ff7cf3,0.36,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Sulfur Falls,BLC,Bloomburrow Commander,333,normal,rare,1,96192,1db63651-5241-4eee-982e-5fa19db87179,0.44,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
+Sulfur Falls,EOC,Edge of Eternities Commander,184,normal,rare,1,107245,258b1cc2-ce3c-4219-808c-812548a7dd12,0.52,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Sulfurous Springs,EOC,Edge of Eternities Commander,185,normal,rare,1,107202,eedb9df2-20d3-4cfd-8aed-336edc37d5a9,1.53,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
 Sunbillow Verge,DFT,Aetherdrift,264,normal,rare,1,103182,94ed132f-b818-4dbf-9b4a-e5acb067e0a4,5.83,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Sundown Pass,SOS,Secrets of Strixhaven,264,normal,rare,1,111735,b34000e9-ff20-4fb4-9d0b-03a172a92457,0.89,false,false,near_mint,en,EUR,2026-05-08T10:13:36.426Z
 Sunscorched Divide,BLC,Bloomburrow Commander,336,normal,rare,1,96224,2bc3a2d6-986e-4b66-a68c-847174657f36,0.25,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Sunset Saboteur,EOE,Edge of Eternities,116,normal,rare,1,106998,396bca07-82ba-49b7-b79e-7784b3a06d48,0.43,false,false,near_mint,en,EUR,2025-08-02T12:05:52.876Z
+Surge to Victory,C21,Commander 2021,58,normal,rare,1,58501,0f02698f-d954-42e0-b4d6-9daf65f29e36,0.95,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 "Surrak, Elusive Hunter",TDM,Tarkir: Dragonstorm,161,normal,rare,1,105015,e4775a26-0b66-40e9-8f64-41d9308ca032,0.02,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
+Swiftblade Vindicator,FDN,Foundations,246,normal,rare,1,101372,f94618ec-000c-4371-b925-05ff82bfe221,0.17,false,false,near_mint,en,EUR,2026-07-26T15:29:12.966Z
 Sword of Vengeance,C14,Commander 2014,276,normal,rare,1,12580,d7f56714-641b-4dba-aead-ded5272289a4,0.34,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Sylvan Scavenging,FDN,Foundations,113,normal,rare,1,101100,c35b683c-d3b2-46a1-876a-81b34e8ba2fc,0.28,false,false,near_mint,en,EUR,2025-06-16T17:08:25.900Z
 Symbiote Spider-Man,SPM,Marvel's Spider-Man,156,normal,rare,1,107866,6a21c0ff-b51a-4946-9737-7872a7eef97b,0.32,false,false,near_mint,en,EUR,2025-09-30T23:51:40.191Z
@@ -331,6 +375,7 @@ Temple of Deceit,THB,Theros Beyond Death,245,normal,rare,1,46817,e3d4fd29-dab5-4
 Temple of Enlightenment,BLC,Bloomburrow Commander,339,normal,rare,1,96348,7a77ecc1-76e1-414f-a472-937eb9b734cc,0.12,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Temple of Enlightenment,THB,Theros Beyond Death,246,normal,rare,1,46816,adad8390-66d8-4022-a059-c68e44e718fe,0.27,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Temple of Epiphany,BLC,Bloomburrow Commander,340,normal,rare,1,96303,5baa269f-dbd1-4920-a53d-d29f6b214d1e,0.16,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
+Temple of Epiphany,FDN,Foundations,699,normal,rare,1,100258,224e8255-7bc6-44a2-86af-14f8446f4f77,0.22,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Temple of Epiphany,M21,Core Set 2021,252,normal,rare,1,50716,1652bb3c-c365-4046-b07e-3d861fa324c6,0.23,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Temple of Malady,M21,Core Set 2021,253,normal,rare,1,50991,c97929f8-ae80-4b4a-9d9b-2f3c7605edc8,0.33,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Temple of Malice,THB,Theros Beyond Death,247,normal,rare,1,46815,9490a495-9f17-45a8-b10c-7de4fcbd2778,0.24,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
@@ -349,6 +394,7 @@ The Lunar Whale,FIN,Final Fantasy,60,normal,rare,1,106630,ae875471-346c-4a76-b26
 The Regalia,FIN,Final Fantasy,267,normal,rare,2,106665,dc420e79-c483-474f-97cd-e9c6a636c306,0.14,false,false,near_mint,en,EUR,2025-06-18T14:09:45.764Z
 Thopter Fabricator,DFT,Aetherdrift,68,normal,rare,1,103152,8924b785-b140-4212-a1eb-a10340e09fea,0.27,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Thrumming Hivepool,EOE,Edge of Eternities,247,normal,rare,1,107079,85caf659-7b43-462e-a342-34703d46eb57,1.45,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
+Thunderclap Drake,OTC,Outlaws of Thunder Junction Commander,53,normal,rare,1,93844,c7299c7c-25a2-449c-ba09-0d5e95e97c55,5.59,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Thundering Raiju,NEO,Kamigawa: Neon Dynasty,166,foil,rare,1,66834,ec1a2920-6d39-4276-921c-65cc16a45f17,0.31,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Time Wipe,BLC,Bloomburrow Commander,262,normal,rare,1,96214,27e36ac4-797e-4873-a8ff-7f256b744680,0.18,false,false,near_mint,en,EUR,2025-11-06T20:40:57.429Z
 Tireless Tracker,EOC,Edge of Eternities Commander,110,normal,rare,1,107045,66444549-ad9b-49c6-a7c6-34e977c1085d,0.23,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
@@ -357,8 +403,10 @@ Tireless Tracker,EOC,Edge of Eternities Commander,110,normal,rare,1,107045,66444
 Topiary Stomper,LCC,The Lost Caverns of Ixalan Commander,261,normal,rare,1,88992,e8b92271-4412-4165-a4a6-e8653e755107,1.1,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Tragedy Feaster,SOS,Secrets of Strixhaven,293,normal,rare,1,112494,ae9009fa-4b52-422d-8ff3-f699089249d8,0.68,false,false,near_mint,en,EUR,2026-05-08T10:13:36.513Z
 Transdimensional Bovine,TMT,Teenage Mutant Ninja Turtles,134,normal,rare,1,110955,de124563-205c-4f40-8c13-4ae203599912,0.02,false,false,near_mint,en,EUR,2026-03-06T23:49:55.788Z
+Turbulent Springs,SOC,Secrets of Strixhaven Commander,57,normal,rare,1,112059,a25cb813-aa6d-469c-aa29-61ffa32267f2,5.22,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Turncoat Kunoichi,TMT,Teenage Mutant Ninja Turtles,26,normal,rare,1,110913,3ae61336-a4ee-40cd-9a18-392d96b873a4,0.09,false,false,near_mint,en,EUR,2026-03-06T23:49:55.768Z
 Twilight Mire,EOC,Edge of Eternities Commander,189,normal,rare,1,107133,b38ba12b-63ab-46ac-8fde-d1c9307c85e2,0.85,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
+Twinflame,JOU,Journey into Nyx,115,normal,rare,1,14534,207128b3-2de3-495a-bf29-eec50c3bd752,2.58,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Tyrant of Kher Ridges,BRO,The Brothers' War,154,normal,rare,1,75546,72a271b1-b757-4373-8e6d-e9698ae96bed,0.17,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Undercity Sewers,MKM,Murders at Karlov Manor,270,normal,rare,1,90747,2b5801fb-2026-4f25-98bc-ebb2f99684b9,25.71,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
 Underground Mortuary,MKM,Murders at Karlov Manor,333,normal,rare,1,90657,0d8938e4-bfa5-47e1-8c71-9c6583346300,18.67,false,false,near_mint,en,EUR,2025-04-20T23:27:12.695Z
@@ -367,6 +415,7 @@ Vernal Fen,EOC,Edge of Eternities Commander,24,normal,rare,1,107140,bac98f27-ef3
 Vicious Rivalry,SOS,Secrets of Strixhaven,241,normal,rare,1,112629,6fa9cd18-3181-4373-ab65-49bf9de9487f,1.68,false,false,near_mint,es,EUR,2026-04-19T19:45:43.760Z
 Villainous Wrath,SPM,Marvel's Spider-Man,74,normal,rare,1,108664,d78e36fd-5817-4c4a-8880-dabe6dd4ba81,0.02,false,false,near_mint,en,EUR,2025-09-30T23:51:40.191Z
 Viridescent Bog,EOC,Edge of Eternities Commander,190,normal,rare,1,107099,96fccdf1-9c68-46cd-ba90-668f677bbc44,0.16,false,false,near_mint,en,EUR,2025-08-06T14:50:32.528Z
+Volcanic Salvo,PM21,Core Set 2021 Promos,172p,normal,rare,1,51645,393b60c7-600a-4bbf-a888-05efe56b7de8,0.18,false,false,near_mint,en,EUR,2026-07-27T13:54:14.217Z
 Voracious Greatshark,IKO,Ikoria: Lair of Behemoths,70,normal,rare,1,50007,1400155f-8911-45fd-aab2-998c8a28292c,0.16,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
 Vraska Joins Up,OTJ,Outlaws of Thunder Junction,236,normal,rare,1,93034,06e546c2-737e-4b17-bf60-3069b1ccdf31,0.69,false,false,near_mint,en,EUR,2025-10-27T10:57:33.331Z
 Welcoming Vampire,VOW,Innistrad: Crimson Vow,46,normal,rare,1,64428,d8f69cea-823c-482b-a605-8138b3d950e6,1.65,false,false,near_mint,es,EUR,2025-04-20T23:27:12.695Z
